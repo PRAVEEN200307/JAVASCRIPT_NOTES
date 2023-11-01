@@ -1,0 +1,70 @@
+ 
+                         JAVASCRIPT
+                         -----------
+DUPLICATE ARROW
+  Swift + alt + down arrow
+
+---------------------------------------------------
+
+CONSOLE LOG - 0:00 16:31
+-----------
+des :log,table,warn,error,time,timeEnd
+---
+console.log("Welcome to js developer");
+console.log("Number :",12);
+console.log("Number :",123433);
+console.log(true);
+console.log([55,77,88,99]);
+console.table({fname:'praveen',age:18});
+// 13:47
+console.error("sample error ");
+console.warn("This is the warning message");
+console.clear();
+
+console.time("Timer");
+
+for(i=0;i<=10;i++){
+    console.log(i);
+}
+console.timeEnd("Timer");
+
+------------------------------------------------
+VARIABLE DECLARATION  16:31   
+--------------------
+
+differnet
+ 1. scope(global scope)
+ 2. variable declareation
+ 3. value assignment
+
+ var
+ let
+ const
+
+var
+ it is out of global scope and inside of scope
+
+let
+ 
+
+ OBJECT
+ const student =  {'name':'praveen','age':'25'}
+ console.log(student.name)
+
+ student.name="sivaraman"
+ console.log(student.name)
+
+---------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+

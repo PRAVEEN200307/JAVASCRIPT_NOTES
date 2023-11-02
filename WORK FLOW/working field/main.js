@@ -40,7 +40,7 @@
     //  a=50;
     //  console.log(a);
     // object
-        // const student =  {'name':'praveen','age':'25'}
+        // const student =  {'name':'pra veen','age':'25'}
         // console.log(student.name);
 
         // student.name="sivaraman";
@@ -48,4 +48,125 @@
 
 // -----------------------------------------------------------
 
+    //  DATA TYPES
+   
+    // primitive data type
+        // String
+        // Number
+        // Boolean
+        // undefined
+        // null
+        // Symbol
+        // biginit
 
+    // Non primitive data type
+        // Array
+        // Object
+        // date
+
+
+// let a= 'is it string?'
+// console.log(typeof a);
+ 
+// a=2098967943489735408754039574508083040384034;
+// console.log(typeof a);
+ 
+// let b;
+// console.log(typeof b);
+
+//  let sim = Symbol()
+//  console.log(sim);
+
+//  let sim1 = Symbol()
+//  console.log(sim===sim1);
+
+//  let a = null;
+//  console.log(a);
+
+// const buddies = ['praveen','dhinesh','saran','dhachiniya'];
+// console.log(typeof buddies);
+
+
+// const familyNames ={ 
+//     'name' : 'praveen',
+//     'brotherName':'dhinesh',
+//     'mamaDaughter1':'sricharan',
+//     'mamaDaughter2':'dhachiniya',
+// };
+
+// console.log(familyNames.mamaDaughter2)
+
+// date
+  // let todayDate = new Date();
+  // console.log(todayDate)
+
+// let a="my phone numer "+98945831+ " my name is praveen and my github username praveen"+200307
+// console.log(a);
+
+// let x = BigInt("123456789012345678901234567890"); 
+// console.log(typeof x);
+
+// ---------------------------------------------------------------------------
+
+// Type Conversion
+//   1. String
+//      toString()
+
+//   2. Number to String
+        // number()
+        // parseInt();
+        // parsefloat();
+
+
+// CHANGE TO STRING
+    // let a;
+    // a=25.45;
+    // console.log(a,typeof a);
+    // a=String(a);
+    // console.log(a,typeof a);
+
+    // let a;
+    // a=true;
+    // console.log(a,typeof a);
+    // a=String(a);
+    // console.log(a,typeof a);
+
+    // let a;
+    // a=['cat','dog','rabbit','pig','hen',500,true,66.9];
+    // console.log(a,typeof a);
+    // a=String(a);
+    // console.log(a,typeof a);
+
+    // let a;
+    // a=25.45;
+    // console.log(a,typeof a);
+    // a=a.toString();
+    // console.log(a,typeof a);
+
+// change to number
+    // let a="125";
+    // console.log(a,typeof a);
+    // a=Number(a)
+    // console.log(a ,typeof a)
+
+    // let a;
+    // a=false;
+    // console.log(a,typeof a);
+    // a=Number(a);
+    // console.log(a,typeof a);
+
+    // let a = ['text','content']
+    // console.log(a,typeof a);
+    // a = Number(a)
+    // console.log(a , typeof a)
+
+    // let a = 23.5
+    // console.log(a,typeof a);
+    // a = parseInt(a);
+    // console.log(a , typeof a)
+
+    // let a = 23.5
+    // console.log(a,typeof a);
+    // a = parseFloat(a);
+    // console.log(a , typeof a)
+// ----------------------------------------------------------------------

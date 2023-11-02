@@ -58,10 +58,62 @@ const
  student.name="sivaraman"
  console.log(student.name)
 
----------------------------------------------------
+--------------------------------------------------------------------------------
+dynamic programing
+
+DATA TYPES (Typeof)
+----------
+
+primitive data type
+
+String
+Number     eg : 1.24 ,25
+Boolearn   eg : true,false
+Undefinded
+Symbols E6
+null
+
+refference type
+ array 
+ object
+ date
 
 
+var a=25;
+console.log(typeof a);
 
+symbols
+-------
+  use object
+  whenever you are use symbols generate the 
+  identify  //fdfgdfg3434343  
+  //es6 2015
+const s=Symbol()
+console.log(s)
+
+array
+-----
+ var courses=['c','c++','java'];
+ console.log(typeof crouses); --object type
+ 
+date
+----
+  var d=new date();
+  console.log(d);
+  console.log(type d)
+ 
+------------------------------------------------------------------------------------------------------
+Type conversion
+---------------
+1.
+ String
+ toString
+
+2.String to number
+   number()
+   parseInt();
+   parsefloat();
+  
 
 
 

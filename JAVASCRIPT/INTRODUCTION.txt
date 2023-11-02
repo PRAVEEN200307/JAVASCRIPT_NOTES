@@ -8,8 +8,13 @@ DUPLICATE ARROW
 
 CONSOLE LOG - 0:00 16:31
 -----------
-des :log,table,warn,error,time,timeEnd
+des :log,table,warn,error,time,timeEnd,count
 ---
+
+group()
+groupEnd()
+groupCollapsed()
+
 console.log("Welcome to js developer");
 console.log("Number :",12);
 console.log("Number :",123433);
@@ -43,9 +48,8 @@ differnet
 
 var
  it is out of global scope and inside of scope
-
 let
- 
+const 
 
  OBJECT
  const student =  {'name':'praveen','age':'25'}

@@ -12,6 +12,21 @@
 // console.warn("This is the warning message");
 // console.clear();
 
+// console.group('My profile')
+//     console.log('hello')
+//     console.log('hello')
+//     console.groupCollapsed('Skills section')
+//      console.log('html');
+//      console.log('css');
+//      console.log('javascipt');
+//     console.groupEnd('end skils')
+//     console.log('i am paveen')
+//     console.log('i am webdeveloper')
+   
+// console.groupEnd('End my profile')
+
+
+
 // ------------------------------------------------------
 
 // varible 
@@ -32,3 +47,5 @@
         // console.log(student.name);
 
 // -----------------------------------------------------------
+
+

@@ -52,11 +52,11 @@ let
 const 
 
  OBJECT
- const student =  {'name':'praveen','age':'25'}
- console.log(student.name)
+  const student =  {'name':'praveen','age':'25'}
+  console.log(student.name);
 
- student.name="sivaraman"
- console.log(student.name)
+  student.name="sivaraman"
+  console.log(student.name)
 
 --------------------------------------------------------------------------------
 dynamic programing
@@ -110,6 +110,7 @@ Type conversion
  toString
 
 2.String to number
+
    number()
    parseInt();
    parsefloat();

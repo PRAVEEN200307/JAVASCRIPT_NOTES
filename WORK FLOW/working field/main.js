@@ -13,15 +13,15 @@
 // console.clear();
 
 // console.group('My profile')
-//     console.log('hello')
-//     console.log('hello')
-//     console.groupCollapsed('Skills section')
+//      console.log('hello')
+//      console.log('hello')
+//      console.groupCollapsed('Skills section')
 //      console.log('html');
 //      console.log('css');
 //      console.log('javascipt');
-//     console.groupEnd('end skils')
-//     console.log('i am paveen')
-//     console.log('i am webdeveloper')
+//      console.groupEnd('end skils')
+//      console.log('i am paveen')
+//      console.log('i am webdeveloper')
    
 // console.groupEnd('End my profile')
 
@@ -184,6 +184,48 @@
     // let x = + y;      // x is a number 
     // console.log(x, typeof x);
 // ----------------------------------------------------------------------
+//  Type coercion
+
+    // concentanation
+ // let a ="25";
+ // let b=10;
+ // console.log(a+b);
+
+//-------------------------------------------------------------------
+ // Operator
+    //  Arithmetic Operators
+    //  Assignment Operators
+    //  Comparison Operators
+    //  String Operators
+    //  Logical Operators
+    //  Bitwise Operators
+    //  Ternary Operators
+    //  Type Operators
 
 
+        //  Arithmatic operations
+            //    Addition
+            //    Subtraction
+            //    Multiplication
+            //    Exponentitation
+            //    Division
+            //    Modulus
+            //    Increment
+            //    Decrement
 
+            //  let a=130;
+            //  let b=20;
+            //  let c;
+            //  c =a+b;
+            //  c= a-b;
+            //  c= a/b;
+            //  c= a*b;
+            //  c= 1%5;
+            //  c=++b;
+            //  c= --b;
+            //  c=2**2;  Exponentiation(ES2016)
+            //  console.log(c);
+
+         
+
+//----------------------------------------------

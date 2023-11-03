@@ -225,7 +225,27 @@
             //  c= --b;
             //  c=2**2;  Exponentiation(ES2016)
             //  console.log(c);
+ 
+        // Assignment Operators Eg:a+=5
+            // let a=10;
+            // a=a+5;
+            // a+=5;
+            // a-=10;0
+            // a*=5;50
+            // a/=5;2
+            // a%=5;
+            // a**=2;
+            // console.log(a);
+        
+        // Comparsion Operator
+            // == 
+              // it is just verify normal flow ,equal to 
+            // ===
+              // it is check datatype ,equal to and equal type  
 
-         
+            // let a="10";
+            // let b=10;
+            // console.log(a==b);
+            // console.log(a===b);
 
 //----------------------------------------------

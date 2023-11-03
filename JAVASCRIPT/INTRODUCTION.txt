@@ -115,7 +115,10 @@ Type conversion
    parsefloat();
   
 
+let y = "5";      // y is a string
+let x = + y;      // x is a number 
 
+console.log(x, typeof x);
 
 
 

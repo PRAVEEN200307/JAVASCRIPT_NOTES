@@ -99,6 +99,11 @@
 // date
   // let todayDate = new Date();
   // console.log(todayDate)
+  
+  //   let date = new Date().getMinutes();
+  //   console.log(date);
+
+
 
 // let a="my phone numer "+98945831+ " my name is praveen and my github username praveen"+200307
 // console.log(a);
@@ -143,6 +148,11 @@
     // a=a.toString();
     // console.log(a,typeof a);
 
+    // let Today = new Date;
+    // console.log(Today,typeof Date);
+    // Today=Today.toString()
+    // console.log(Today,typeof Today);
+
 // change to number
     // let a="125";
     // console.log(a,typeof a);
@@ -169,4 +179,11 @@
     // console.log(a,typeof a);
     // a = parseFloat(a);
     // console.log(a , typeof a)
+
+    // let y = "5";      // y is a string
+    // let x = + y;      // x is a number 
+    // console.log(x, typeof x);
 // ----------------------------------------------------------------------
+
+
+

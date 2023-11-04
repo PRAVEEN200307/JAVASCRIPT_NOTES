@@ -248,4 +248,183 @@
             // console.log(a==b);
             // console.log(a===b);
 
+        // Relation Operators
+            /*
+             * > greater then
+             * < less than
+             * >= greater than or equal to
+             * <= less than or equal to 
+             * 
+            */
+         
+            // let a=10;
+            // let b=20;
+            // if(a<b){
+            //    console.log('true')
+            // }
+            // else{
+            //    console.log('false')
+            // }
+        
+        // Logical Operators
+           /*
+             && logicla and
+             || logical or 
+             !  logical not 
+           */
+            /*
+              Ex: And
+              let a=101;
+              // maxmimum 100
+              // minimum 50 
+
+             if(a<100 && a>50 ){
+                console.log('true')
+             }
+             else{
+                console.log('false')
+             }
+            */ 
+
+            /*
+              OR
+              let a=15
+              if(a==10 || a==15 ){
+               console.log('true')
+              }
+              else{
+                console.log('false')
+              }
+            */
+
+            /*
+            ! not symbol
+            let a=10;
+            if(a!==10){
+              console.log("true");
+            }
+            else{
+                console.log("false")
+            }
+            */
+        
+        //  Strict equality or Identify Operator
+            // see the photo get more information
+               /* begginer level
+                    undefined
+                      let a;
+                      let b;
+                      console.log(a===b);
+                    null
+                      let a=null;
+                      let b=null;
+                      console.log(a===b);
+                    true
+                      let a=true;
+                      let b=true;
+                      console.log(a===b);  
+                    false
+                      let a=false;
+                      let b=false;
+                      console.log(a===b);  
+                    string
+                      let a='joes';
+                      let b='joes';
+                      console.log(a===b);  
+                    0
+                      let a=0
+                      let b=0
+                      console.log(a===b);  
+                internmediate
+                    0  -0 ,0 +0;
+                      let a=0;
+                      let b=-0;
+                      console.log(a===b);
+                    0,False
+                      let a=0;
+                      let b=false;
+                      console.log(a===b);
+                    "",False
+                      let a="";
+                      let b=false;
+                      console.log(a===b);
+                    "",0
+                      let a="";
+                      let b=0;
+                      console.log(a===b);
+                    "0",0
+                      let a="0";
+                      let b=0;
+                      console.log(a===b);
+                    "15",15
+                      let a="15";
+                      let b=15;
+                      console.log(a===b);
+                    "null,undefined"
+                      let a=null; 
+                      let b=undefined;
+                      console.log(a==-b);   
+                */
+        //  Conditional or Ternary Operator(?!) in javascript
+            
+              /* Syntax
+               *   condition ? "true":"false"
+               */
+
+          /*    
+              const age=15;
+              const result=age>=18?"Eligible":"Not Eligible"
+              console.log(result);
+
+              function welcome(name){
+                const result=name?name:"No Name";
+                console.log("Welcome "+result);
+              }
+              welcome();
+              welcome(null);;
+              welcome('praveen');
+          */
+          // Bitwise Operators in javascript
+            // 16 8 4 2 1 Deciamal to Binary conversion
+            
+            // const a=12; // 0 1 1 0 0
+            // const b=24; // 1 1 0 0 0
+
+            // console.log(a&b);
+            /*
+              0 0 0 1 0
+              0 0 0 1 1
+              ----------
+              0 0 0 1 0 ->2
+              -----------
+            */
+            /*
+              12 24
+              0 1 1 0 0
+              1 1 0 0 0
+              ----------
+              0 1 0 0 0  ->8
+              -----------
+                2^0
+            */
+            /*
+              &= And
+              let a=12;
+              let b=24;
+              a&=b;
+              console.log(a); 2
+  
+              |(Bitwise or)
+              let a=12;
+              let b=24;
+              a|=b;
+              console.log(a); 28
+              
+              (Bitwise ~(Pronounce tialda) )
+              let a=12;
+              a=~a; -12-1=-13
+              console.log(a); -13
+              1:43 
+            */
+
 //----------------------------------------------

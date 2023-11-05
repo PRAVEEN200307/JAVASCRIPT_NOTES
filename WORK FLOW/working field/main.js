@@ -1,3 +1,11 @@
+/*
+ console
+ varible 
+ DATA TYPES
+ Type Conversion
+ concentanation
+ Operator 
+*/
 
 // alert("welcome to js  hello world");
 
@@ -196,11 +204,13 @@
     //  Arithmetic Operators
     //  Assignment Operators
     //  Comparison Operators
-    //  String Operators
+    //  relational Operators
     //  Logical Operators
+    //  Strict equality or Identify Operator( ==.===)
+    //  Conditional or Ternary Operator(?)
     //  Bitwise Operators
-    //  Ternary Operators
-    //  Type Operators
+    //  Nullish coalescing operator (??)
+    //  Incremnt and decremnet Operator
 
 
         //  Arithmatic operations
@@ -426,5 +436,78 @@
               console.log(a); -13
               1:43 
             */
+            // Bitwise Operator ^ XOR operator  
+              /* it is like a Opposite number 
+                 24 ^16
+                  let a=24;
+                  let b=16;
+                  console.log(a^b);
+
+                1  1  0  0  0
+                1  0  0  0  0
+                --------------
+                0  1  0  0  0   ->8
+                ------------------      
+              */
+            // left sift(<<)
+              //  let a=5;
+              //  let b=2;
+              //  console.log(a<<b);
+            /*
+                16 8 4 2 1
+                 0 0 1 0 1
+                 1 0 1 0 0  --20
+             */
+            // Right shift(>>)
+              /*
+                let a=5;
+                let b=2;
+                console.log(a>>b);
+                0 0 1 0 1
+                0 0 0 0 1 -- 1 
+              */
+        // Nullish coalescing operator (??)
+              // const a=undefined??'No value assign';
+              // console.log(a);
+              /*
+                const proFile={
+                fullName:"praveen",
+                age:"28",
+                posiition:"fullStack"
+               } 
+               console.log(proFile)
+
+               proFile.salary??=15000
+               console.log(proFile.salary) 
+              */
+        // Increment (++) or decremnet Operator
+          /**
+           * pre increment Operator  ++a
+           * Post incrememt Operator  a++
+           */
+          /*
+            let a=1;
+            a++;  // a=a+1 
+            console.log(a);
+
+            let b=2;
+            b--;  // a=a-1 
+            console.log(b);
+           */
+          /*
+            Post Increment
+               First Change a values and affter increment
+            let  x=3;
+            const y=x++;
+            console.log("X :"+ x ,"Y :"+ y);
+           
+            Pre Increment (++x)
+               First Increment and after change a values
+            let  x=3;
+            const y=++x;  //y:4 x:4
+            console.log("X :"+ x ,"Y :"+ y); 
+          */  
+       
 
 //----------------------------------------------
+    

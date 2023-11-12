@@ -742,3 +742,97 @@
     }
     console.log(arr)
   */
+//Nested for loop
+  /*
+    let a=[
+    ['Praveen','Dhinesh','Bharath','balaji'],
+    ['tharun','akshai','sasi','devdharasan'],
+    ];
+
+    let nums=[];
+    for(let i=0;i<5;i++){
+        nums.push([])
+      for(let j=0;j<5;j++){
+        nums[i].push(j)
+      }
+    }
+    console.log(nums) 
+  */
+
+// for of
+  /*
+    // execute array using for of
+    let names=['Praveen','Dhinesh','Bharath','balaji'];
+
+    for(let i=0;i<names.length;i++){
+      console.log(names[i]);
+    }f
+
+    console.log("for of Loop");
+    for(let frdName of names){
+      console.log(frdName);
+    }
+    */
+
+// For in Loop in JavaScript -- usue in object
+   /*
+     let user = {
+      name : 'tutor joes',
+      age: 35,
+      city: "Salem",
+      contact : "9043017689"
+    }
+
+    for(let property in user){
+       console.log(property +" : "+user[property])
+    }
+   */
+
+// Looping over objects by converting to an array
+ /*
+   keys
+   values    
+
+    let user = {
+      name : 'tutor joes',
+      age: 35,
+      city: "Salem",
+      contact : "9043017689"
+    }
+
+    // how to change object to array
+    let arr_key= Object.keys(user);
+    console.log(arr_key); get extract keys only
+
+    let arr_value = Object.values(user);
+    console.log(arr_value)  get extract values only
+
+    for(let i=0;i<arr_key.length;i++){
+      console.log(arr_key[i]+" :"+arr_value[i])
+    }
+    
+ */
+
+// Break Statement 
+//  for(let i=1;i<=10;i++){
+//    console.log(i);
+//    if(i==4){
+//      break;
+//    }
+//  }
+
+//continue statement --skaping perticular activity
+// for(let i=1;i<=10;i++){
+ 
+//   if(i==4){
+//     continue;
+//   }
+//   console.log(i);
+// }
+
+// for(let i=1;i<=10;i++){
+//   if(i%2==0){
+//     continue
+//   }
+//   console.log(i);
+// }

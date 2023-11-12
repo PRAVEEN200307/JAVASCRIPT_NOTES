@@ -529,6 +529,216 @@
     Break Statement in JavaScript
   */
    
-  
+    // if condition 
 
+    /*   Syntax
+          if(condition){
+            // ----
+          }
+
+          let Age=prompt('Enter your age');
+          if(Age!=null && Age>=18){
+            console.log('Eligible for vote');
+          }
+    */
+
+  //  --------------
+    // if else
+    /*
+      Syntax
+      if(condition){
+
+      } 
+      else{
+
+      }
+
+       let Age=prompt('Enter your age');
+        if(Age!=null && Age>=18){
+          console.log('Eligible for vote');
+        }
+        else{
+          console.log("you aren't eligible");
+        }
+    */
+  // ----
+   // else if
+  /*
+     if(condition){
+
+     }
+     else if(condition){
+      //  else if in your need to whenever to need use multiple time
+     }
+     else{
+
+     }
+
+     Ex:
+      let number=18;
+      if(number<0) //leser than zero
+      {
+          console.log(number +' Negative number');
+      }
+      else if(number >0){
+          console.log(number +' Positive number');
+      }
+      else{
+          console.log("giving number is zero");
+      }
+
+     Ex2:
+       avg=87;
+       90-100  A Grade
+       80-89   B Grade
+       70-79   C Grade
+       <70     D Grade
+
+      let avg=prompt('Enter your average mark');
+      if(avg>=90 && avg<=100){
+          console.log("A Grade");
+      }
+      else if(avg>80 && avg<=89){
+        console.log('B Grade');
+      }
+      else if(avg>70 && avg<=79){
+          console.log('C Grade');
+      }
+      else{
+          console.log('D grade');
+      }
+  */
+  // Nested if statement
+  /*
+     if(condition){
+        some logic
+      if(condition){
+        some logic
+      }
+     } 
+
+     min mark >=35
+       91-100 A
+       81-98  B
+       71-80  C
+       D
+
+     EX 2:
+      let English=95,tamil=98,maths=56;
+      let total,avg;
+      total=English+tamil+maths;
+      avg= total/3;
+      console.log('Total   : '+ total);
+      console.log('Average : '+ avg.toFixed(2));
+      
+      if(English>=35 && tamil>=35 && maths>=35){
+          console.log("Result  : Pass")
+            if(avg=>91&&avg<=100){
+              console.log('Grade : Grade A')
+            }
+            else if(avg=>81&&avg<=90){
+              console.log('Grade : Grade B')
+            }
+            else if(avg>=71&&avg<=80){
+              console.log('Grade : Grade C')
+            }
+            else{
+              console.log('Grade : Grade D')
+            }
+      }
+      else{
+          console.log('you are Fail no Grade')
+      }  
+  */
+  //  Switch case
+  /*
+   switch(choice){
+     case choice:
+     break;
+     case choice:
+     break;
+     deafult
+    } 
+     ex:
+      let num=3;
+      switch(num){
+          case 1:
+            console.log('One');
+            break;
+          case 2:
+            console.log('Two');
+            break;
+          case 3:
+            console.log('Three');
+            break;
+          default :
+            console.log("Invalid input");
+            break;
+      }
+     
+  */
+  // combining cases statement
+    /* 
+     let letter='a';
+     switch(letter){
+       case 'a':
+       case 'e':
+       case 'i':
+       case 'o':
+       case 'u':
+       case 'A':
+       case 'E':
+       case 'I':
+       case 'O':
+       case 'U':
+        console.log(letter +" is a Vowel");
+        break;
+       default:
+        console.log(letter +"is not a Vowel")
+     } 
+    */
 // -------------------------------------------------------------------
+// Looping Stament
+// While Loop
+
+  /*
+   while(condition){
+    //  code Execute
+   }
+
+   let i=1;
+   while(i<=10){
+    console.log(i);
+    i++;
+  }
+  */
+// do while
+  /*
+    do{
+
+    }
+    while(condition)
+
+    Ex:
+    let table=5;
+    let limit=5;
+    let init=1
+
+    do{
+        console.log(table +'X'+init+'='+ (table*init));
+        init++
+    }
+    while(init<=limit)
+  */
+// for loop
+  /*
+  for(let  i=1;i<=10;i++){
+    console.log(i)
+  }
+
+    let arr=[]
+    for(let i=0;i<50;i++){
+      arr.push(i);
+    }
+    console.log(arr)
+  */

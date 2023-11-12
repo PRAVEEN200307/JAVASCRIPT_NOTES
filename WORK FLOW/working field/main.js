@@ -207,9 +207,9 @@
     //  relational Operators
     //  Logical Operators
     //  Strict equality or Identify Operator( ==.===)
-    //  Conditional or Ternary Operator(?)
+    //  Conditional or Ternary Operator(?'true':'false')
     //  Bitwise Operators
-    //  Nullish coalescing operator (??)
+    //  Nullish coalescing operator (condition??"statement")
     //  Incremnt and decremnet Operator
 
 
@@ -217,7 +217,7 @@
             //    Addition
             //    Subtraction
             //    Multiplication
-            //    Exponentitation
+            //    Exponentitation(square)
             //    Division
             //    Modulus
             //    Increment
@@ -509,5 +509,26 @@
           */  
        
 
-//----------------------------------------------
-    
+//------------------------------------------------------------------
+ 
+  //  video time 02:01 to 02:58 to 12-11-23
+  /*
+    If Statement in JavaScript
+    If else Statement in JavaScript
+    Else If Statement in JavaScript
+    Nested If Statement in JavaScript
+    Switch Statement in JavaScript
+    Combining Cases Statement in JavaScript
+    While Loop in JavaScript
+    Do While Loop in JavaScript
+    For Loop in JavaScript
+    Nested For Loop in JavaScript
+    For of Loop in JavaScript
+    For in Loop in JavaScript
+    Looping over objects by converting to an array in JavaScript
+    Break Statement in JavaScript
+  */
+   
+  
+
+// -------------------------------------------------------------------

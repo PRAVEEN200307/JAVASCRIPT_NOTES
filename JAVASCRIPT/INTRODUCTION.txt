@@ -120,9 +120,25 @@ let y = "5";      // y is a string
 let x = + y;      // x is a number 
 
 console.log(x, typeof x);
+------------------------------------------------------------
 
+BEFORE CALLENGE
+HTML
+CSS
+TAILWINDCSS
+BOOSTRAP
+REAL WORLD UI PROJECT
 
+ AFFTER FINISH ACHERIVED MY HEADPHONE
+  HEADPHONE 
 
+CHALLENGE OF HOLIDAY
+ COMMUNICATION
+ TECHNICAL KNOWLEDGE
+ DIAY WORKOUT
+
+ AFFTER ACCEICVEMENT 
+  FREEELANCE ONCE WEBSITE
 
 
 

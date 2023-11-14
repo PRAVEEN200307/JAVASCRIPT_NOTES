@@ -191,41 +191,123 @@
   console.log(add(25,25));
 
   //functions with Arbitrary arguments
-  // arguments keyword  -storing array variable
-    function sum(){
-        let total=0;
-        for(let i=0;i<arguments.length;i++){
-            total+=arguments[i]; //total=total+arguments[i];
+    // arguments keyword  -storing array variable
+        function sum(){
+            let total=0;
+            for(let i=0;i<arguments.length;i++){
+                total+=arguments[i]; //total=total+arguments[i];
+            }
+            return total;
         }
-        return total;
-    }
-    console.log("aribitary functions :"+sum(75,25));
+        console.log("aribitary functions :"+sum(75,25));
 
-  //spread operator  --create new variable
-    function total(...args){
-        let total=0;
-        for(let i=0;i<args.length;i++){
-        total+=args[i]; //total=total+args[i];
+    //spread operator  --create new variable
+        function total(...args){
+            let total=0;
+            for(let i=0;i<args.length;i++){
+            total+=args[i]; //total=total+args[i];
+            }
+            return total;
         }
-        return total;
-    }
 
-    console.log("spread oprator :"+total(15,20));
-    console.log("spread oprator :"+total(15,20,15,100));
+        console.log("spread oprator :"+total(15,20));
+        console.log("spread oprator :"+total(15,20,15,100));
 
-//Functions as Expression
-  
-const add =function(a ,b){
-   return a+b;
-}
+    //Functions as Expression
+    
+        const add =function(a ,b){
+        return a+b;
+        }
+        console.log(add);
+        console.log(add(10,15));
 
-console.log(add);
-console.log(add(10,15));
-
-*/
+*//*
 //Arrow function es6  or fact arrow functions
-  //const functionName =(parameters)=>{ function body};
+   //const functionName =(parameters)=>{ function body};
 
-// const add =(a,b)=>{ return a+b; }
+    const add =(a,b)=>{ return a+b; }
+    console.log(add(10,15)); 
 
-// console.log(add(10,15)); 3:45;
+    //Ex:1 arrow function s with map()
+
+        let numbers=[1,2,3,4,5];
+        console.log(numbers);
+        let doubledNumbers=numbers.map(num=>num*2);
+        console.log(doubledNumbers);
+
+    // ex 2 Using  arrow functions with filter();
+        let words =['apple','banana','orange','grape'];
+
+        let filterWords=words.filter(words=>words.length>5);
+        console.log(filterWords);
+
+    //3. Using arrow functions with reduce()
+        let numbers=[1,2,3,4,5];
+        console.log(numbers);
+        let total=numbers.reduce((sum,numbers)=>sum+numbers,0);
+        console.log(total);
+
+    //4.using arrow function to create a closure
+        let createCounter =()=>{
+        let count=0;
+        return ()=>{
+            count++;
+            return count;
+        }
+        };
+
+        let counter=createCounter()
+
+        console.log(counter());
+        console.log(counter());
+        console.log(counter());
+
+// call back function
+// hierar functions
+
+    function myCallback(){
+        console.log("I am callback functions");
+    }
+
+    // higherOrderFunctions
+    function test(myCallback){
+        myCallback();
+    }
+    test(myCallback);
+
+    //setTimeout(function,1000);  --fucntion delay 3,000
+        setTimeout(function(){
+        console.log("This is the set time out functions")
+        },3000)
+
+    //SetInterval Every one functions call owenly
+        setInterval(function(){
+        console.log("hello World joes");
+        },3000);
+
+        const n =[1,2,3]
+        numbers.forEach(function(n){
+        console.log(n);
+        });
+*//*
+// Block scope and functins scope
+
+//Block scope--if condiditon it is working in the scope wheh we have wronly refference error
+ 
+    if(true){
+        let blockscopevariable =" \
+        i am a variable with block scope"
+        console.log(blockscopevariable);
+    }
+// function scope
+    function myfunction(){
+        blockscopevariable =" \
+        i am a variable with block scope"
+        console.log(blockscopevariable);
+        function run(){
+            console.log(blockscopevariable);
+        }
+        run()
+    }
+    myfunction();
+*/

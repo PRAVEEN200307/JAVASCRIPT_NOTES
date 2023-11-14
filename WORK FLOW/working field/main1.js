@@ -134,7 +134,7 @@
         c=num.slice(-3)  //negative indexing
         console.log("slice -3"+c);
 
-    // split in js
+    // split -- this split a array
         let a="i am praveen smart thinker";
         c= a.split(" ");
         console.table(c)
@@ -178,3 +178,54 @@
     // fromcharcode -- askii valuce to charater
         console.log(String.fromCharCode(97,98,99));
 */
+/*
+//fucntions 
+  //set of code when use to call
+  // function with reutrn type
+  function add(a,b){
+    return a+b;
+  }
+
+  console.log(add(15,20));
+  console.log(add(20,20));
+  console.log(add(25,25));
+
+  //functions with Arbitrary arguments
+  // arguments keyword  -storing array variable
+    function sum(){
+        let total=0;
+        for(let i=0;i<arguments.length;i++){
+            total+=arguments[i]; //total=total+arguments[i];
+        }
+        return total;
+    }
+    console.log("aribitary functions :"+sum(75,25));
+
+  //spread operator  --create new variable
+    function total(...args){
+        let total=0;
+        for(let i=0;i<args.length;i++){
+        total+=args[i]; //total=total+args[i];
+        }
+        return total;
+    }
+
+    console.log("spread oprator :"+total(15,20));
+    console.log("spread oprator :"+total(15,20,15,100));
+
+//Functions as Expression
+  
+const add =function(a ,b){
+   return a+b;
+}
+
+console.log(add);
+console.log(add(10,15));
+
+*/
+//Arrow function es6  or fact arrow functions
+  //const functionName =(parameters)=>{ function body};
+
+// const add =(a,b)=>{ return a+b; }
+
+// console.log(add(10,15)); 3:45;

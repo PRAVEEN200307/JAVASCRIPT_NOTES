@@ -179,7 +179,7 @@
         console.log(String.fromCharCode(97,98,99));
 */
 /*
-//fucntions 
+//funtions 
   //set of code when use to call
   // function with reutrn type
   function add(a,b){
@@ -205,7 +205,7 @@
         function total(...args){
             let total=0;
             for(let i=0;i<args.length;i++){
-            total+=args[i]; //total=total+args[i];
+              total+=args[i]; //total=total+args[i];
             }
             return total;
         }
@@ -228,7 +228,7 @@
     const add =(a,b)=>{ return a+b; }
     console.log(add(10,15)); 
 
-    //Ex:1 arrow function s with map()
+    //Ex:1 arrow functions with map()
 
         let numbers=[1,2,3,4,5];
         console.log(numbers);
@@ -244,6 +244,7 @@
     //3. Using arrow functions with reduce()
         let numbers=[1,2,3,4,5];
         console.log(numbers);
+        //sum--total or asumlator
         let total=numbers.reduce((sum,numbers)=>sum+numbers,0);
         console.log(total);
 
@@ -263,7 +264,7 @@
         console.log(counter());
 
 // call back function
-// hierar functions
+
 
     function myCallback(){
         console.log("I am callback functions");
@@ -290,24 +291,45 @@
         console.log(n);
         });
 *//*
-// Block scope and functins scope
+        // Block scope and functins scope
 
-//Block scope--if condiditon it is working in the scope wheh we have wronly refference error
- 
-    if(true){
-        let blockscopevariable =" \
-        i am a variable with block scope"
-        console.log(blockscopevariable);
-    }
-// function scope
-    function myfunction(){
-        blockscopevariable =" \
-        i am a variable with block scope"
-        console.log(blockscopevariable);
-        function run(){
-            console.log(blockscopevariable);
-        }
-        run()
-    }
-    myfunction();
+        //Block scope--if condiditon it is working in the scope 
+            when we have wronly refference error
+        
+            if(true){
+                let blockscopevariable =" \
+                i am a variable with block scope"
+                console.log(blockscopevariable);
+            }
+        // function scope  --suggession for use let ,const
+            function myfunction(){
+                blockscopevariable =" \
+                i am a variable with function scope"
+                console.log(blockscopevariable);
+                function run(){
+                    console.log(blockscopevariable);
+                }
+                run()
+            }
+            myfunction();
+        */
+// --------------------------------------------------------------------------------------------
+/*
+    What is Array ?
+    Foreach in JavaScript
+    More Examples forEach method
+    Map in JavaScript
+    More Examples Map Method
+    Filter in JavaScript
+    Reduce in JavaScript
+    Slice in JavaScript
+    Splice in JavaScript
+    Concat in JavaScript
+    Sort in JavaScript
+    Fill in JavaScript
+    Includes in JavaScript
+    Join in JavaScript
+    Reverse in JavaScript
+    Push in JavaScript
+    Pop in JavaScript 
 */

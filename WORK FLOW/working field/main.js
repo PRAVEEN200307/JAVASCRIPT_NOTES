@@ -766,7 +766,7 @@
 
     for(let i=0;i<names.length;i++){
       console.log(names[i]);
-    }f
+    }
 
     console.log("for of Loop");
     for(let frdName of names){

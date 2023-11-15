@@ -333,3 +333,194 @@
     Push in JavaScript
     Pop in JavaScript 
 */
+/*
+// what is array
+    //25 meathod
+   
+   let a=[10,20,30,40];
+   let b= new Array(10,20,30,40);
+   console.log(b);
+
+   let c = new Array(10,'praveen',true,
+   {
+    name:'praveen',
+    position:'senior developer',
+    currentlyWorking:'handle the team'
+   });
+   console.table(c);
+ 
+
+
+   foreach map,slice,splice,concat,sort,fill,includes,join
+   Push,pop,shift,unshift,indexof,lastindexof,lastindexof,every
+   some,find,From,isArray,Filter,Flat,reduce...
+
+    
+   //forEach()
+        const number=[1,2,3,4,5,6,7,8,9,20];
+        
+        //values,index,array
+        number.forEach((values)=>{
+            console.log(values)
+        });
+
+        number.forEach((values,index)=>{
+            console.log("index values :"+index+" values :"+values)
+        });
+
+        const user =[
+        {fullName:'Ram',age:18,city:'Chetpat',salary:10000},
+        {fullName:'Praveen',age:20,city:'Thirumpoondi',salary:15000},
+        {fullName:'Dhinesh',age:18,city:'Thirumpoondi',salary:25000},
+        {fullName:'Balaji',age:18,city:'Thirumpoondi',salary:30000},
+        {fullName:'Rakesh',age:18,city:'Mukkur',salary:30000},
+        {fullName:'Somaskandhan',age:24,city:'Perkanakadu',salary:30000},
+        ];
+
+        user.forEach((values)=>{
+            console.log(values.fullName,values.city)
+        });
+
+//Exploring the ForEach meathod 
+// with 10 example 
+
+    const fruits =['apple','banana','cherry'];
+    console.log(fruits);
+
+    fruits.forEach( (values)=>{
+        console.log(values);
+    });
+
+ //2. exmaple of using the ForEach meathod to 
+   // sum all elements of an array
+
+    const number=[15,5,5,10]
+    let total=0;
+
+    number.forEach( (number)=>{
+            total+=number;
+    })
+    console.log("Total amount"+total);
+
+//3.Example of using the forEach method to 
+//create a new array from an exisiting one:
+
+    let number=[15,5,5,10];
+    let doubleNumber=[]
+
+    number.forEach( (number)=>{
+        doubleNumber.push(number*2);
+    })
+
+    console.log(doubleNumber);
+
+// 4. Example of using the forEach method
+// to find the max element of an array
+
+    let number=[0,1,2,3,4,5,10,34];
+    console.log(number);
+
+    let max=number[0]
+    number.forEach( (number)=>{
+    if(number>max){
+        max=number
+    }
+    });
+
+// 5. Example of using the forEach method
+// to calculate the average of an array
+
+    let mark=[100,80,90,70]
+    //ans1:
+    let avg=0;
+    mark.forEach( (number)=>{
+    avg += number/mark.length 
+    })
+    console.log(avg);
+
+    // ans2:
+    let count=0
+    avg=0;
+    mark.forEach( (number)=>{
+    avg += number; 
+    count++;
+    })
+    console.log(avg/count);
+
+//6.Example of using the forEach method
+//to filter an array
+
+    const number=[1,2,4,5,6,7,8,9,10,28,26,23] 
+    const evenNumber =[];
+
+    number.forEach( (number)=>{
+    if(number%2==0){
+        evenNumber.push(number)
+    }
+    });
+
+    console.log(evenNumber);
+
+//7.Example of using the forEach method
+//to update elements of an array
+
+    const names =['praveen','dhinesh','kumar'];
+    names.forEach( (name,index)=>{
+        names[index]=name.toUpperCase();
+    });
+
+    console.log(names);
+
+//8. Example of using the forEach method
+//to check if an element exists in an array
+
+    let fruits =['apple','orange','banana'];
+    let exits = false
+
+    fruits.forEach( (fruits)=>{
+    if(fruits === 'banana'){
+            exits  = true
+    }
+    })
+
+    console.log(exits);
+
+//9. Example of using the forEach method
+// to check concat array elements
+
+    const words =['Hello','Praveen','kumar'];
+    let concat =""
+    words.forEach( (words)=>{
+    concat += words+" " ;
+    });
+    console.log(concat)
+
+//----------------------------------
+//map() Meathod
+   //sqrt(),toFixed(2);
+const number=[1,2,3,4,5,6,7,8,9,10];
+
+//map(values,index,array)
+let sqrt=number.map((value)=>{
+  return  Math.sqrt(value).toFixed(2);
+});
+console.log(sqrt);
+
+
+const user =[
+    {fullName:'Ram',age:18,city:'Chetpat',salary:10000},
+    {fullName:'Praveen',age:20,city:'Thirumpoondi',salary:15000},
+    {fullName:'Dhinesh',age:18,city:'Thirumpoondi',salary:25000},
+    {fullName:'Balaji',age:18,city:'Thirumpoondi',salary:30000},
+    {fullName:'Rakesh',age:18,city:'Mukkur',salary:30000},
+    {fullName:'Somaskandhan',age:24,city:'Perkanakadu',salary:30000},
+    ];
+//HINT:()--WRAP A CONTACT
+const isELigible=user.map((user)=>({
+    name:user.fullName,
+    ...user,
+   eligible:user.age>18?'Eligible':'NotEligible'
+}));
+
+console.table(isELigible);
+4:40*/ 

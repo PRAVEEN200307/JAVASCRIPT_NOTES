@@ -399,7 +399,7 @@
 
     number.forEach( (number)=>{
             total+=number;
-    })
+    });
     console.log("Total amount"+total);
 
 //3.Example of using the forEach method to 
@@ -425,7 +425,7 @@
     if(number>max){
         max=number
     }
-    });
+    });  
 
 // 5. Example of using the forEach method
 // to calculate the average of an array
@@ -458,7 +458,7 @@
         evenNumber.push(number)
     }
     });
-
+                    
     console.log(evenNumber);
 
 //7.Example of using the forEach method
@@ -523,4 +523,121 @@ const isELigible=user.map((user)=>({
 }));
 
 console.table(isELigible);
-4:40*/ 
+*/
+
+/* originalArray.map(current_value,index,originalArray) *//*
+
+//1.DoubletheNumber
+const number =[1,2,3,4,5];
+let Doublenumber= 
+number.map( (arrayNum)=>arrayNum*2);
+console.log(Doublenumber);
+
+//2. capitalized
+const words =["hello","world"];
+console.log(words);
+const capitalizedWords = words.map(words =>words.toUpperCase());
+console.log(capitalizedWords);
+
+///3.Commning array array
+const fruits = ["apple","banana"];
+const colors = ["red","yellow"];
+
+// const fruitColors = 
+fruits.map( (fruit,index)=>fruit+"="+colors[index]);
+console.log(fruitColors);
+
+//4.Filtering an Array
+const numbers = [1,2,3,4,5];
+
+const evenNumber = numbers.map(num=>num%2==0);
+console.log(evenNumber);
+
+//5. Extracting properties from an Array of objects
+
+const obj=[
+    { name:'Praveen',age:20},
+    { name:'Kiva',age:22},
+    { name:'Karthi',age:25},
+    { name:'Deepika',age:18},
+]
+
+const names = obj.map( user=>user.name);
+console.log(names);
+
+//6.Modifying an Array of Objects
+const updateUser = obj.map(us=>{
+  return{
+     names:us.name,
+     age:us.age+1
+  }
+});
+console.log(updateUser);
+
+
+//7. arrry to change a object using map
+
+const words= ['apple','banana','cherry'];
+
+const wordStats = words.map( (currrentValue,index,array)=>{
+    return{
+      words:currrentValue,
+      length:currrentValue.length,
+      position:index,
+      totalWords:array.length
+    }
+} );
+
+console.table(wordStats);
+
+
+//4:56 Filter()
+let number =[10,2,3,4,5,6,7,8,9,10];
+let evenNumbers = number.filter(num=>num%2==0);
+console.log(evenNumbers);
+
+const student=[
+    { name:'Praveen',age:20,gender:'male'},
+    { name:'Thamana',age:22,gender:'female'},
+    { name:'Karthi',age:25,gender:'male'},
+    { name:'Deepika',age:18,gender:'female'},
+]
+
+let adulAge = student.filter( detail=>detail.age>=25);
+console.log(adulAge);
+
+let isMale = student.filter(detail=>detail.gender==='female');
+console.log(isMale);
+
+--------------------------------
+let words= ["cat","dog","elephant","fish","giraffe"]
+
+let moreThanFive = words.filter(letter=>letter.length===3);
+console.log(moreThanFive);
+
+
+----------------------------
+let words =["cat","dog","elephant","fish"
+  ,"giraffe","eagle"];
+  
+let wordsStartWithE = words.filter( words=>words.startsWith('e'));
+console.log(wordsStartWithE);
+
+-------------------------------------------
+
+const products = [
+  { name:"Apple",category:"fruit",price:100},
+  { name:"Carrot",category:"vegatable",price:50},
+  { name:"Orange",category:"fruit",price:120},
+  { name:"Broccoli",category:"vegetable",price:75},
+  { name:"Mango",category:"fruit",price:110},
+];
+
+const expensiveFruits =  
+products.filter( detail=> detail.category==='fruit'&&
+detail.price>100);
+
+console.log(expensiveFruits);
+5:07
+*/
+

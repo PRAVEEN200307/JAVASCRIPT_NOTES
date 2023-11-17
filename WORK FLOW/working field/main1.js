@@ -315,13 +315,13 @@
         */
 // --------------------------------------------------------------------------------------------
 /*
-    What is Array ?
+    What is Array?
     Foreach in JavaScript
     More Examples forEach method
     Map in JavaScript
     More Examples Map Method
     Filter in JavaScript
-    Reduce in JavaScript
+    Reduce in JavaScript(assumlator)
     Slice in JavaScript
     Splice in JavaScript
     Concat in JavaScript
@@ -589,7 +589,7 @@ const wordStats = words.map( (currrentValue,index,array)=>{
 } );
 
 console.table(wordStats);
-
+--------------------------------------------------------------
 
 //4:56 Filter()
 let number =[10,2,3,4,5,6,7,8,9,10];
@@ -609,21 +609,21 @@ console.log(adulAge);
 let isMale = student.filter(detail=>detail.gender==='female');
 console.log(isMale);
 
---------------------------------
+----------
 let words= ["cat","dog","elephant","fish","giraffe"]
 
 let moreThanFive = words.filter(letter=>letter.length===3);
 console.log(moreThanFive);
 
 
-----------------------------
+----------
 let words =["cat","dog","elephant","fish"
   ,"giraffe","eagle"];
   
 let wordsStartWithE = words.filter( words=>words.startsWith('e'));
 console.log(wordsStartWithE);
 
--------------------------------------------
+---------------
 
 const products = [
   { name:"Apple",category:"fruit",price:100},
@@ -639,5 +639,151 @@ detail.price>100);
 
 console.log(expensiveFruits);
 5:07
-*/
+-------------
 
+let books=[
+    { title: 'Eloquent JavaScript', author: 'Marijn Haverbeke', year: 2011 },
+    { title: 'JavaScript: The Good Parts', author: 'Douglas Crockford', year: 2008 },
+    { title: 'Learning Web Design: A Beginner\'s Guide to HTML, CSS, JavaScript, and Web Graphics', author: 'Jennifer Niederst Robbins', year: 2012 },
+    { title: 'HTML and CSS: Design and Build Websites', author: 'Jon Duckett', year: 2011 },
+    { title: 'CSS Secrets: Better Solutions to Everyday Web Design Problems', author: 'Lea Verou', year: 2015 },
+    { title: 'JavaScript and JQuery: Interactive Front-End Web Development', author: 'Jon Duckett', year: 2014 },
+    { title: 'You Don\'t Know JS', author: 'Kyle Simpson', year: '2014-2019' },
+    { title: 'React: Up & Running', author: 'Stoyan Stefanov', year: 2016 },
+    { title: 'Node.js Design Patterns', author: 'Mario Casciaro', year: 2014 },
+    { title: 'Head First Design Patterns', author: 'Eric Freeman and Elisabeth Robson', year: 2004 }
+];
+
+const searchTerm='HTML'.toLowerCase();
+const year =2011
+const filteredBooks= books.filter( books =>{
+  return books.title.toLowerCase().includes(searchTerm) || books.year === year ;
+});
+console.log(filteredBooks);
+-------------------------------------------
+*/
+//Reduce()--have accumulator
+
+// 10elements single values  reduce 
+/*
+  Syntax
+  array.reduce( function(accummulator,currentValue,currentIndex,arrray){
+  },initialValue);
+
+// addd sum of value
+let number = [1,2,3,4,5,15];
+let sum = number.reduce( (accummulator,currentValue)=>{
+      return accummulator+=currentValue
+} );
+
+console.log(sum);
+
+//Flattening an array
+let nestedArray = [[1,2],[3,4],[5,6]];
+console.log(nestedArray);
+let flattening = nestedArray.reduce( 
+    accValue,currentValue=>accValue.concat(currentValue)
+);
+console.log(flattening);
+
+-----------------------------------------
+ColorCounter
+
+const colors=["red","blue","green","red","blue","green"];
+
+let colorsCounts = colors.reduce( (accummulator,currrentValue)=>{
+ if(currrentValue in accummulator){
+   accummulator[currrentValue]++
+ }
+ else{
+   accummulator[currrentValue]=1; //red:1,blue:1,green:1
+ }
+ return accummulator;
+},{});
+
+console.log(colorsCounts);
+
+5:22
+-----------------------------------------------
+
+// Largest of value in array
+let number=[5,10,15,20,25];
+
+let largestValue = number.reduce( (asumlator,number)=>{
+  if(number>asumlator){
+     asumlator=number 
+  }
+  return asumlator
+});
+console.log(largestValue);
+
+
+let largest = number.reduce( (savingVar,RunningValue)=>
+   Math.max(savingVar,RunningValue)
+)
+console.log(largest);
+------------------------
+//grouping the city using the reduce() meathod
+
+const student=[
+    { name:'Praveen',age:20,gender:'male',city:'Chennai'},
+    { name:'Thamana',age:22,gender:'female',city:'Salem'},
+    { name:'Siva',age:25,gender:'male',city:'Chennai'},
+    { name:'Keerthisuresh',age:18,gender:'female',city:'Chennai'},
+];
+
+const groupByCity = student.reduce( (assumlator,currentVal)=>{
+  if(currentVal.city in assumlator){
+     assumlator[currentVal.city].push(currentVal);
+  }
+  else{
+      assumlator[currentVal.city]=[currentVal];
+  }
+  return assumlator;
+},{});
+
+console.log(groupByCity);
+--------------------------------------------------------
+// slice(start,end) meathod in javascript
+    //pertiticular position extract store some array
+
+const number=[1,2,3,4,5,6,7,8,9,10];
+
+console.log(number);
+console.log(number.slice(2));
+console.log(number.slice(2,5));
+--------------------------------------------------
+//splice() meathod
+  splice is to remove elements in array
+  it will change original array
+
+   let removedElemment= splice(start,length,new element)
+
+    //delect two index to all the  index
+    const n1=[1,2,3,4,5,6,7,8,9,10];
+    let removedElement= n1.splice(2);
+    console.log(" Splice :"+n1);//1,2
+    console.log("return the delected element :"+removedElement);
+
+    //delect the value
+    const n2=[1,2,3,4,5,6,7,8,9,10];
+    console.log("Before splice  :"+n2);
+    const delectedItem = n2.splice(2,2)
+    console.log("Delected items :"+delectedItem)
+    console.log("After splice   :"+n2);
+
+    // Remove and add the value
+    const n2=[1,2,3,4,5,6,7,8,9,10];
+    console.log("Before splice  :"+n2);
+    // const delected = n2.splice(2,2,34,35);
+    const delected = n2.splice(2,2,[34,35]);//adding the value
+    console.log("after splice :"+delected);
+    console.log(n2);
+
+
+    //add the value without the remove the value
+    const n3=[1,2,3,4,5,6,7,8,9,10]
+    console.log("before splice :"+n3);
+    n3.splice(2,0,300,400);
+    console.log("after splice :"+n3);
+*/

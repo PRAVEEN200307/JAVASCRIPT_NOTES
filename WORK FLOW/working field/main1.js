@@ -15,7 +15,7 @@
     // Dont use this Only for knowledge
     /*
     let groups =[
-    ["Ram","Sam","Ravi"],
+    ['Ram","Sam","Ravi"],
     ["kumar","Tiya","Sundar"],
     ["Rajesh","Sara","Rahul"],
     ];
@@ -786,4 +786,24 @@ console.log(number.slice(2,5));
     console.log("before splice :"+n3);
     n3.splice(2,0,300,400);
     console.log("after splice :"+n3);
+----------------------------------------------------------------
+
+//cancat
+const a=[10,20,30];
+const b=[40,50,60];
+const c=[70,80,90];
+
+let e=a.concat(b);
+console.log(e);
+let d=a.concat(b,c);
+console.log(d);
+
+let f=a.concat(b,c,100,110);
+console.log(f);
+
+f=a.concat(b,c,100,110,['a','b','c']);
+console.table(f);
+----------------------------------
+5:39
+sort()
 */

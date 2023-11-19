@@ -664,13 +664,13 @@ console.log(filteredBooks);
 */
 //Reduce()--have accumulator
 
-// 10elements single values  reduce 
+// 10 elements single values  reduce 
 /*
   Syntax
   array.reduce( function(accummulator,currentValue,currentIndex,arrray){
   },initialValue);
 
-// addd sum of value
+// add sum of value
 let number = [1,2,3,4,5,15];
 let sum = number.reduce( (accummulator,currentValue)=>{
       return accummulator+=currentValue
@@ -686,7 +686,7 @@ let flattening = nestedArray.reduce(
 );
 console.log(flattening);
 
------------------------------------------
+-------------------
 ColorCounter
 
 const colors=["red","blue","green","red","blue","green"];
@@ -702,8 +702,25 @@ let colorsCounts = colors.reduce( (accummulator,currrentValue)=>{
 },{});
 
 console.log(colorsCounts);
+----------------------------
+let arr2d =[
+    ["a","b","c"],
+    ["c","d","f"],
+    ["d","f","g"],
+];
 
-5:22
+
+let count =arr2d.flat().reduce( (assumlator,value)=>{
+    if(value in assumlator){
+      assumlator[value]++
+    }
+    else{
+      assumlator[value]=1
+    }
+    return assumlator
+   },{})
+
+console.log(count);
 -----------------------------------------------
 
 // Largest of value in array
@@ -804,6 +821,132 @@ console.log(f);
 f=a.concat(b,c,100,110,['a','b','c']);
 console.table(f);
 ----------------------------------
-5:39
 sort()
+   //arrenging a element asscending to decending order
+    const names=["Kumar","Aureen","Joes","Zara",
+    "Stanley"];
+    console.log("Before Sort : "+names);
+    names.sort();
+    console.log("After Sort  : "+names);
+
+    const num=[10,100,25,150,45,80,9];
+    console.log("Before Sort : "+num);
+    num.sort();
+    console.log("After Sort  : "+num);
+
+    //sorting a  number
+    //Ascending order and decending order
+    num.sort( (a,b)=>{
+        return a-b;
+    });
+
+    console.log("Asending Order :"+num);
+
+    const user=[
+    {name:"Praveen",Age:20,City:'Thirumpoondi',Salary:40000},
+    {name:"Joes",Age:22,City:'Salem',Salary:44000},
+    {name:"kalithasan",Age:24,City:'Pandicherry',Salary:44000},
+    {name:"Arun",Age:23,City:'Cheyyar',Salary:44000},
+    {name:"Sowmiya",Age:18,City:'Cheyyar',Salary:44000},
+    ];
+    console.table(user);
+
+    user.sort( function(a,b){
+    return a.Age-b.Age;
+    });
+
+    console.table(user);
+
+    user.sort( (a,b)=>{
+        if(a.name>b.name) return 1
+        if(a.name>b.name) return -1
+        return 0;
+    });
+
+    console.table(user);
+---------------------------------
+
+//Fill(value,start,end);
+ //Change original array fill
+
+    let n=[1,2,3,4,5,6,7,8,9,10];
+
+    console.log("Before Fill  :" +n);
+    n.fill(20);
+    n.fill(20,3);
+    console.log(n); //1,2,3,20,20,20,20,20
+    n.fill(20,3,5);
+    console.log(n);  //[ 1, 2, 3, 20, 20, 6, 7, 8, 9, 10 ]
+------------------------------------------
+//includes(value,start_index)
+    // is there ,is'nt there,result will be given boolean
+const products=["pen","pencil","Eraser","Box",'pen'];
+let result=products.includes('pen');
+console.log(result);
+
+let result1=products.includes('pen',1);
+console.log(result1);
+
+------------------------------------------
+
+//join(seperator)
+  //arrray to change a string
+
+  const products=["pen","pencil","Eraser","Box",'pen'];
+ console.log(products.join());
+  console.log( products.join('|')); //default command
+-----------------------------------------------------
+
+// Reverse
+const n =[1,2,3,4,5,6];
+console.log("Before reverse :"+n);
+n.reverse();
+console.log("After reverse  :"+n);
+
+//Array Elements With Length property
+const x ={
+    0:10,
+    1:20,
+    2:30,
+    3:40,
+    length:4
+}
+console.log(x);
+Array.prototype.reverse.call(x);
+console.log(x);
+------------------------------------------------
+
+//push in javascript
+   //push is add the variable and then return the length
+let n=[1,2,3,4,5];
+console.log(n);
+console.log(n.push(60)); //return the length
+console.log(n);
+n.push(80,90,100);
+console.log(n);
+
+let fruits =["Apple"]
+fruits.push(2);
+console.log(fruits);
+
+// when join the two array
+let users1=["praveen","Dhineh","kalithasan","Somaskandhan"];
+let user2=["Rajesh","Android developer"];
+
+users1.push(...user2);
+console.log(users1);
+----------------------------------------------------
+
+//pop
+  //remove the last element ,return the  remove element
+
+  const user=['somaskandhan','thanigaivel','saravannan','santhosh'];
+  console.log("Before pop  :"+user);
+  console.log(user.pop());//reuturn removed element
+  console.log(user);
+
+  //mission succcessful
+----------------------------------------------------
 */
+//reduce meathod
+

@@ -771,10 +771,10 @@ console.log(number.slice(2));
 console.log(number.slice(2,5));
 --------------------------------------------------
 //splice() meathod
-  splice is to remove elements in array
+  splice is to remove elements in array and add the value 
   it will change original array
 
-   let removedElemment= splice(start,length,new element)
+   let removedElemment= splice(start,delected count,new element)
 
     //delect two index to all the  index
     const n1=[1,2,3,4,5,6,7,8,9,10];
@@ -886,6 +886,16 @@ console.log(result);
 
 let result1=products.includes('pen',1);
 console.log(result1);
+-----
+const sentence = 'The quick brown fox jumps over the lazy dog.';
+
+const word = 'fox';
+
+console.log(
+  `The word "${word}" ${
+    sentence.includes(word) ? 'is' : 'is not'
+  } in the sentence`,
+);
 
 ------------------------------------------
 
@@ -948,5 +958,5 @@ console.log(users1);
   //mission succcessful
 ----------------------------------------------------
 */
-//reduce meathod
+
 

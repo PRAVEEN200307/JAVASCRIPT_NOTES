@@ -749,7 +749,7 @@ const student=[
     { name:'Keerthisuresh',age:18,gender:'female',city:'Chennai'},
 ];
 
-const groupByCity = student.reduce( (assumlator,currentVal)=>{
+const groupByCity = student.reduce( (accumlator,currentVal)=>{
   if(currentVal.city in assumlator){
      assumlator[currentVal.city].push(currentVal);
   }

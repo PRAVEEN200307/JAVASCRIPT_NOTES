@@ -6,6 +6,7 @@
 06:19:08 Every and Some in JavaScript
 06:26:11 Primitive and Reference Data Types
 06:39:27 Multiple ways to clone an array in JavaScript
+          // slice(),concat(),JSON.parse()JSON.Stringfy(),array.from(),spread Operator
 06:43:58 Use of const for Creating Arrays in JavaScript
 06:47:14 Exploring the Different Ways to Create Object in JavaScript
 07:02:17 Optional Chaining in JavaScript
@@ -108,7 +109,7 @@ console.log("index :"+indexValue);
     let result =n.every("All Element are Even"+checkEven);
     console.log(result); //true
   ---------------------
-  //Array of object
+     Array of object
     const user=[
       {name:"thamana",age:24},
       {name:"thisha",age:28},
@@ -221,4 +222,19 @@ let originalArray =[1,2,3];
     let clonedArray =JSON.parse(JSON.stringify(originalArray));
     console.log(clonedArray);
 -----------------------------------------------------------
-*/
+// const arrray in javascript
+      //developer consias
+     primitive -- change a address
+     refference --- change a value
+  const a =10;
+  console.log(a);
+  a=24;  //getting the errror
+
+  let arr = [1,10,20,30,40,50,60,70,80];
+  console.log(arr);
+  arr.push(90,100);
+  console.log(arr);
+-------------------------------------------------------
+*/ //6:47
+//Exploring the Differenct Ways to create Object
+

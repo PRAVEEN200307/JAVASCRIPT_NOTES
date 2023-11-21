@@ -100,7 +100,7 @@ console.log("index :"+indexValue);
   console.log(result);
   ------------------------
   Call back(s) method
-  ---------------
+
     let n=[2,4,10,28,98];
 
     function checkEven(n){
@@ -109,7 +109,7 @@ console.log("index :"+indexValue);
     let result =n.every("All Element are Even"+checkEven);
     console.log(result); //true
   ---------------------
-     Array of object
+          --Array of object
     const user=[
       {name:"thamana",age:24},
       {name:"thisha",age:28},
@@ -117,7 +117,7 @@ console.log("index :"+indexValue);
       {name:"simbu",age:17},
     ]
     function isEligible(num){
-      return num.age>18
+      return num.age>18;
     }
 
     let vote=user.every(isEligible);
@@ -160,7 +160,7 @@ console.log(b);
 a=25;
 console.log(a);
 console.log(b);
------------------------------------
+----------------
 //Reference type
    // use the memory or address //heap memory 
   
@@ -230,11 +230,87 @@ let originalArray =[1,2,3];
   console.log(a);
   a=24;  //getting the errror
 
-  let arr = [1,10,20,30,40,50,60,70,80];
+  const arr = [1,10,20,30,40,50,60,70,80];
   console.log(arr);
   arr.push(90,100);
   console.log(arr);
 -------------------------------------------------------
-*/ //6:47
+
 //Exploring the Differenct Ways to create Object
 
+// type: Object literal Notation
+var students={
+   fullName:"Praveen kumar",
+   father:"Anbarsu",
+   age:12,
+   address:"187 nemili street",
+   city:'Thirumpoondi',
+   about:function(){
+      return `${this.fullName} is from ${this.address}`;
+   },
+   iseligiblity: function(){
+     return this.age>18;
+   }
+};
+
+console.log(students.about());
+console.log(students.iseligiblity());
+
+// type: factory function 
+function addStudent(fullName,father,age,address,city){
+   const user={};
+   user.fullName=fullName,
+   user.father=father,
+   user.age=age;
+   user.address=address,
+   user.city=city,
+   user.about=function(){
+    return `${this.fullName} is from ${this.address}`;
+   },
+   user.iseligiblity=function(){
+    return this.age>18;
+   }
+   return user;
+}
+console.log(addStudent("dhinesh","Anbarsu","18","193 nemili st","Thirumpoondi(melmaruvathur)"));
+ ------------
+//type: prototype Inheritance
+// avoiding the memory using the refference meathod
+
+const studentsDetail ={
+  about:function(){
+    return `${this.fullName} is from ${this.address}`;
+   },
+   iseligiblity:function(){
+    return this.age>18;
+   }
+}
+
+
+function addStudent(fullName,father,age,address,city){
+  const user=Object.create(studentsDetail);
+  user.fullName=fullName,
+  user.father=father,
+  user.age=age;
+  user.address=address,
+  user.city=city
+  // user.about=studentsDetail.about, //refference the another object avoid the big memory
+  // user.iseligiblity=studentsDetail.iseligiblity;
+  return user;
+}
+
+console.log(addStudent("Srithar","ajith kumar",20,"187 piliyar kovil street","kilkodukalur"));
+ 
+
+const obj1={
+   key1:"value1",
+   key2:"value2"
+}
+console.log(obj1);
+
+const obj2=Object.create(obj1);
+obj2.key3="valu3";
+    
+console.log(obj2);
+console.log(obj2.key1);
+ */

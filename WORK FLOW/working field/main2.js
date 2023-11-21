@@ -237,25 +237,29 @@ let originalArray =[1,2,3];
 -------------------------------------------------------
 
 //Exploring the Differenct Ways to create Object
+   TYPE:
+      Object literal Notation
+      factory function
+      prototype inheritance
 
 // type: Object literal Notation
-var students={
-   fullName:"Praveen kumar",
-   father:"Anbarsu",
-   age:12,
-   address:"187 nemili street",
-   city:'Thirumpoondi',
-   about:function(){
-      return `${this.fullName} is from ${this.address}`;
-   },
-   iseligiblity: function(){
-     return this.age>18;
-   }
-};
+  var students={
+    fullName:"Praveen kumar",
+    father:"Anbarsu",
+    age:12,
+    address:"187 nemili street",
+    city:'Thirumpoondi',
+    about:function(){
+        return `${this.fullName} is from ${this.address}`;
+    },
+    iseligiblity: function(){
+      return this.age>18;
+    }
+  };
 
-console.log(students.about());
-console.log(students.iseligiblity());
-
+  console.log(students.about());
+  console.log(students.iseligiblity());
+-------------------------------------------
 // type: factory function 
 function addStudent(fullName,father,age,address,city){
    const user={};
@@ -273,7 +277,7 @@ function addStudent(fullName,father,age,address,city){
    return user;
 }
 console.log(addStudent("dhinesh","Anbarsu","18","193 nemili st","Thirumpoondi(melmaruvathur)"));
- ------------
+ ----------------------------------
 //type: prototype Inheritance
 // avoiding the memory using the refference meathod
 
@@ -300,8 +304,7 @@ function addStudent(fullName,father,age,address,city){
 }
 
 console.log(addStudent("Srithar","ajith kumar",20,"187 piliyar kovil street","kilkodukalur"));
- 
-
+ -----------------
 const obj1={
    key1:"value1",
    key2:"value2"
@@ -313,4 +316,47 @@ obj2.key3="valu3";
     
 console.log(obj2);
 console.log(obj2.key1);
- */
+--------------------------------------------
+
+// Optional Chaining in javaScript
+    ^/
+     * optional chaining used for read and delect
+     * introduce 2020
+     * database is to json format
+    ^/
+  //hint: Before optinal chaninig before using 
+    //technology and trick
+
+  const user={
+    name:{
+      firstName:'Praveen',
+      lastName:'Kumar'
+    }
+    // address:{
+    //    City:'Thirumpoondi'
+    // }
+  }
+
+  //Option 1
+    //use conditional ternary operator
+  console.log(user.address?user.address.city:undefined);
+  //Option-2
+  console.log(user.address && user.address.city);
+
+  //Optional-3  //optinal chaining
+  console.log(user.address?.city)
+  //Optional-4
+  let key='City';
+  console.log(user.address?.[key])
+
+  //analysis the bigdata ease to manage
+     hard meathod
+  console.log(user_detail.account && 
+    user_detail.account.holder && 
+    user_detail.account.holder.profile &&
+    user_detail.account.holder.profile.brithDate
+  );
+      easy meathod
+   //optional chaining
+  console.log(user_detail.account?.holder?.profile?.brithDate);
+*/

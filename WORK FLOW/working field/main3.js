@@ -48,7 +48,7 @@ const user={
 
 user.curiosity();
 
-user.nested.curiosity();
+user.nested.curiosity()
 ----------------------
 const students={
    age:25,
@@ -85,7 +85,7 @@ takeObject()
        .array
        .object
     * Destructuring in function parameters
-
+    * swapping
 //Array destructuring :
 //Before ES6
 const Numbers = [1,2,3,4,5];
@@ -160,7 +160,7 @@ Destruturing in function parameter
     printPerson(person);
     //Output : Name:Praveen,age:20
 
-----------------------------------------------------------------
+--------------------------------------------
 //Swapping variables
 
 let a=1;
@@ -213,6 +213,7 @@ console.log(name);
 console.log(City);
 console.log(state);
 
+---------------------------------------
 const number =[1,2,[3,5,[5,6]]];
 console.log(number);
 
@@ -224,6 +225,7 @@ console.log(five);
 console.log(five1);
 console.log(six);
 
+-----------------------------
 //array of object
 
 const users =[
@@ -267,5 +269,124 @@ const users =[
     console.log(name2);
     console.log(city2);
 
+    --End of destruturing assignment
 //--------------------------------------------------------------
+
+// Destruring in javascript
+     // arrray variable ,object type
+     
+// Array
+
+//type1
+  let a=[10,20,30,'praveen',50,90];
+  let [ten,twenty,,UserName]=a
+
+  console.log(ten);
+  console.log(twenty);
+  console.log(UserName);
+
+//type2 //spread operator
+    let a=[10,20,30,'praveen',50,90];
+    let [ten,twenty,...spread]= a;
+    console.log(ten);
+    console.log(twenty);
+    console.log(spread);
+
+//type3 //inside array
+  let nestedArray =[[1,2],[3,4],[5,6]];
+  let [ [a,b],[c,d],[e,f] ]=nestedArray  
+ 
+  console.log(a);
+  console.log(b);
+  console.log(c);
+  console.log(d);
+  console.log(e);
+  console.log(f);
+
+//object
+    let person ={
+        name:'Tom',Age:8,gender:'male'
+    }
+    let {name,Age,gender}=person
+    console.log(name);
+    console.log(Age);
+    console.log(gender);
+
+    //nested objhet
+    let address={
+        street:"Cherry Road",
+        city:"Salem",
+        state:"Tamil Nadu",
+        zip:"6360007",
+    };
+
+    let employee ={
+        name:"Tom",
+        age:12,
+        gender:"female",
+        address
+    };
+
+    console.log(employee);
+
+    let {name,age,gender,address:{street,city,state,zip}}=employee;
+
+    console.log(name);
+    console.log(age);
+    console.log(ge);
+    console.log(street);
+    console.log(city);
+    console.log(state);
+    console.log(zip);
+-------------------------------------------------------------------------
 */
+// Creating Objects in javascript
+
+//1.Using Object literals
+//2.Using the Object constructor
+//3.Using the object.create() meathod.
+//4.Using class:
+
+/*
+// 1.Using Object literals
+const person={
+  name:"jerry",
+  age:15,
+  job:'creating fun'
+};
+
+//2.Using the object construtor
+   //this is build in meathod
+const person = new Object();
+person.name="ElderDear";
+person.age=35;
+person.job="Product the Forest";
+console.log(person);
+
+//3.Object.create() meathod
+  //Object.create(prototype,propertiesObjects);
+    //prototype
+      //protype is a creating a meathod
+   const CreatePrototype={
+      sayhello:function(){
+          console.log('Hello ',this.name)
+      }
+   }
+   const profile = Object.create(CreatePrototype);
+   profile.name="praveen";
+   profile.age=19;
+   profile.job="software Engineer";
+   profile.sayhello();
+*/
+// 4.Using Class:
+       //Object creating using class
+    
+    class Profile{
+        constructor(name,age,gender){
+           this.name=name;
+           this.age=age;
+           this.gender=gender
+        }   
+    }
+    const profile = new Profile('Praveen',23,'Male');
+    console.log(profile);

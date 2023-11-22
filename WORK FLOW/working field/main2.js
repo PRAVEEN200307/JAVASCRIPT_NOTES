@@ -9,8 +9,8 @@
           // slice(),concat(),JSON.parse()JSON.Stringfy(),array.from(),spread Operator
 06:43:58 Use of const for Creating Arrays in JavaScript
 06:47:14 Exploring the Different Ways to Create Object in JavaScript
-07:02:17 Optional Chaining in JavaScript
-
+07:02:17 Optional Chaining in JavaScript 
+         closures
 ----------------------------------------------
 //shift()
   // remove the element in the first index
@@ -348,7 +348,7 @@ console.log(obj2.key1);
   //Optional-4
   let key='City';
   console.log(user.address?.[key])
-
+--------------------
   //analysis the bigdata ease to manage
      hard meathod
   console.log(user_detail.account && 
@@ -359,4 +359,55 @@ console.log(obj2.key1);
       easy meathod
    //optional chaining
   console.log(user_detail.account?.holder?.profile?.brithDate);
+Example 
+----
+  const person = {
+    name: 'John',
+    address: {
+      street: '123 Main St',
+      city: 'Exampleville',
+    //   zipCode: '12345'
+    },
+    hobbies: ['reading', 'coding', 'traveling']
+  };
+  
+    //coalsing operator
+    const zipCode = person.address?.zipCode ?? 'User did\'nt Enter the data';
+    console.log(zipCode);
+---------------------------------------------------------------
+//closures
+    let a=100;
+
+    function Returnvar(){
+        let b=a
+        console.log('a is :',b);
+    }
+    a=50;
+    Returnvar();
+
+    //returning functions - heigher order functions
+    //lexical scoping -inner scope can access outer variable
+    function outer(name){
+        let outerVariable='Bread';
+        function inner(){
+            let innerVariable ='Butter'
+            console.log("inner varible  : "+innerVariable);
+            console.log("outer variable : "+outerVariable);
+            console.log("hello",name);
+        }  
+        return  inner()
+    }
+    outer('Praveen');
+    outer('Dhinesh');
+
+
+    function makeAdd(x){
+      return function(y){
+          return x+y
+      }
+    }
+
+    let add5= makeAdd(10);
+    console.log(add5(15));
+-------------------------------------------------------------------------
 */

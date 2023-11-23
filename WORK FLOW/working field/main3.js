@@ -7,7 +7,6 @@
     08:14:01 Iterating Through JavaScript Objects
     08:21:06 Organizing Data with Objects inside Arrays in JavaScript
 ----------------------------------------------------------------------------
-
 //function Inside object
      this -- defined as the call current object
     const object ={
@@ -343,7 +342,7 @@ const users =[
 // Creating Objects in javascript
 
 //1.Using Object literals
-//2.Using the Object constructor
+//2.Using the Object constructor --ex const ob1= new Object();
 //3.Using the object.create() meathod.
 //4.Using class:
 
@@ -377,7 +376,7 @@ console.log(person);
    profile.age=19;
    profile.job="software Engineer";
    profile.sayhello();
-*/
+
 // 4.Using Class:
        //Object creating using class
     
@@ -390,3 +389,96 @@ console.log(person);
     }
     const profile = new Profile('Praveen',23,'Male');
     console.log(profile);
+*/
+
+// ------------------------------------------
+//Dot Notation and Bracket Notation in javascript
+/*   
+    const user={
+        name:"Tutuor joes",
+        age:30,
+        job:"Developer"
+    };
+
+    console.log(user);
+
+  //Dot notation
+    console.log(user.name);
+    user.name="joes";
+    console.log(user.name);
+    console.log(user);
+
+  //Backet Notation
+    console.log(user["age"]);
+    user["age"]=25;
+    console.log(user["age"]);
+    console.log(user);
+    let work="job"
+    console.log(user[work]);
+
+    let user={
+        "first name":"Tutor",
+        "last name":"joes"
+    };
+    console.log(user["first name"]);
+    console.log(user["last name"]);
+-----------------------------------------------------------*/
+// Iterating Through javascript Objects
+
+// Using the for-in loop
+
+//this is meathod convert the array
+    // Using Object.key()
+    // Using Object.values()
+    // Using Object.entries()
+
+/*// Using the for-in loop 
+const user={
+    name:"Praveen",
+    age:30,
+    job:"Programmer"
+};
+console.log(user);
+
+for(let key in user){
+    console.log(`${key} :${user[key]}`)
+}
+
+// Using Object.key()
+       //storing a keys in new array
+const user={
+    name:"Praveen",
+    age:30,
+    job:"Programmer"
+};
+
+const object=Object.keys(user);
+console.log(object)
+
+object.forEach(value=>{
+   console.log(`${value} : ${user[value]}`)
+});
+--------------------------------------------
+//Using Object.values()
+   //store a values in a new array
+const object1=Object.values(user);
+console.log(object1);
+
+object1.forEach(value=>{
+    console.log(`${value}`);
+ });
+-------------------------------------
+//Using Object.entries()
+   //store all the object in arrry format 
+const entries = Object.entries(user);
+console.log(entries);
+
+entries.forEach(value =>{
+    console.log(`${value[0]} : ${value[1]}`);
+})
+
+for(let i=0;i<entries.length;i++){
+   console.log(`${entries[i][0]} : ${entries[i][1]}` )
+} 
+----------------------------------------------------------------------------
+*/

@@ -481,4 +481,24 @@ for(let i=0;i<entries.length;i++){
    console.log(`${entries[i][0]} : ${entries[i][1]}` )
 } 
 ----------------------------------------------------------------------------
-*/
+*/  /*
+// Object inside Arrays in javascript
+    //rest Api concept ,user detail 
+
+const users =[
+    {name:"Joes",age:25,email:'joes@gmail.com'},
+    {name:"Praveen",age:33,email:'Praveen@gmail.com'},
+    {name:"Sam",age:32,email:'Sam2345@gmail.com'},
+];
+console.log(users);
+
+for(let us of users){
+    // console.log(us);
+    console.log(us.name);
+}
+
+const olderUsers =users.filter(value=>value.age>30);
+console.log(olderUsers);
+ //concat, fill,every,find,filter,flat,keys,some,values,with
+
+*/// ---------------------------------------------------------------------

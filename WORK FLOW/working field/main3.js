@@ -483,7 +483,7 @@ for(let i=0;i<entries.length;i++){
 ----------------------------------------------------------------------------
 */  /*
 // Object inside Arrays in javascript
-    //rest Api concept ,user detail 
+     //rest Api concept ,user detail 
 
 const users =[
     {name:"Joes",age:25,email:'joes@gmail.com'},

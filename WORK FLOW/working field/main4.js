@@ -123,4 +123,66 @@ const anotherPerson ={
 console.log(person.fullName.call(anotherPerson));
 */
 //-------------------------------------------------------
+//class
+
+//Es5 version  --type of work for class
+/*
+function Person(name){
+    this.name=name;
+}
+
+Person.prototype.sayHello = function(){
+   console.log("Hello my name is :"+this.name);
+}
+
+const personObj = new Person("Praveen");
+console.log(personObj);
+personObj.sayHello();
+
+function Student(name,age){
+    Person.call(this,name);
+    this.age=age;
+}
+
+//Prototype chaining
+Student.prototype=Object.create(Person.prototype);
+Student.prototype.construtor= Student;//student function
+
+Student.prototype.eligiblity=function(){
+    console.log(this.name+" age is "+this.age+""+
+    (this.age>=18? " Eligible":" Not Eligible"));
+}
+
+let student = new Student("ram",18);
+console.log(student);
+student.sayHello();
+student.eligiblity();
+*/
+//Es6 Example
+class Person{
+    constructor(name){
+        this.name=name;
+    }
+     sayHello(){
+        console.log("Hello my name is :"+this.name);
+    }
+}
+const personObj = new Person("Praveen");
+console.log(personObj);
+personObj.sayHello();
+//Inheritance
+class Student extends Person{
+    constructor(name,age){
+         super(name);
+         this.age=age;
+    }
+    eligiblity(){
+        console.log(this.name+" age is "+this.age+""+(this.age>=18? " Eligible":" Not Eligible"));
+    }
+}
+
+let student = new Student("Dhinesh",18);
+// console.log(student);
+student.sayHello();
+student.eligiblity();
 

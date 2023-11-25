@@ -68,7 +68,7 @@
     arrayDestruturing(letArray);
 */
 //---------------------------------------------------------
-//call,apply,and bind Methods in Javascript
+/*//call,apply,and bind Methods in Javascript
 
 function joes(){
     console.log(this)
@@ -121,3 +121,6 @@ const anotherPerson ={
     lastName :"Thasan",
 };
 console.log(person.fullName.call(anotherPerson));
+*/
+//-------------------------------------------------------
+

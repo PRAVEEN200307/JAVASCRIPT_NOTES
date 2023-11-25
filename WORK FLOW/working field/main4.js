@@ -8,7 +8,7 @@
 09:40:44 Prototype
 */
 
-//DIfference between Rest prameter
+//Difference between Rest prameter
   //Functions and Spread Operators in
   //Javascript
 
@@ -157,32 +157,128 @@ let student = new Student("ram",18);
 console.log(student);
 student.sayHello();
 student.eligiblity();
-*/
+
 //Es6 Example
+    class Person{
+        constructor(name){
+            this.name=name;
+        }
+        sayHello(){
+            console.log("Hello my name is :"+this.name);
+        }
+    }
+    const personObj = new Person("Praveen");
+    console.log(personObj);
+    personObj.sayHello();
+    //Inheritance
+    class Student extends Person{
+        constructor(name,age){
+            super(name);
+            this.age=age;
+        }
+        eligiblity(){
+            console.log(this.name+" age is "+this.age+""+(this.age>=18? " Eligible":" Not Eligible"));
+        }
+    }
+
+    let student = new Student("Dhinesh",18);
+    // console.log(student);
+    student.sayHello();
+    student.eligiblity();
+*///--------------------------------------------------
+/* 
+    09:09:31 Getter and Setter in JavaScript
+    09:24:45 Static
+    09:40:44 Prototype
+*/
+//Getter and setter in JavaScript
+
+//Example 1:Getters and setters with Object literal
+  //Getter is get a value
+  //Setter is set a value
+
+/*
+const person={
+    firstName :"Praveen",
+    lastname:"Spidy",
+    get fullName(){
+        return this.firstName.concat(" ",this.lastname);
+    },
+    set fullName(name){
+       const part=name.split(' ');
+        this.firstName=part[0];
+        this.lastname=part[1];
+    }
+}
+console.log(person);
+console.log(person.firstName);
+ //getter is use do need to function parameter
+console.log(person.fullName);
+//set is set a value
+person.firstName="Parthi ban";
+*/
+/*
 class Person{
-    constructor(name){
-        this.name=name;
+    constructor(firstName,lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
-     sayHello(){
-        console.log("Hello my name is :"+this.name);
+     get fullName(){
+          return this.firstName+" "+this.lastName
     }
-}
-const personObj = new Person("Praveen");
-console.log(personObj);
-personObj.sayHello();
-//Inheritance
-class Student extends Person{
-    constructor(name,age){
-         super(name);
-         this.age=age;
-    }
-    eligiblity(){
-        console.log(this.name+" age is "+this.age+""+(this.age>=18? " Eligible":" Not Eligible"));
+    //reasign
+    set fullName(name){
+        const parts = name.split(" ");
+        this.firstName=parts[0];
+        this.lastName=parts[1];
     }
 }
 
-let student = new Student("Dhinesh",18);
-// console.log(student);
-student.sayHello();
-student.eligiblity();
+const p1 = new Person("Kali","Thasan");
+console.log(p1);
+console.log(p1.fullName);
+p1.fullName ="Raj kumar";
+console.log(p1);
+console.log(p1.fullName);
+*/
 
+/*
+ 1. create a class called circle
+ 2. radius values as construtor
+ 3. getter and setter function called diameter //2*2
+ 4.  getter area() pi are square
+     pi=22/7  raidus=7
+     22/7*7*7
+*/
+/*
+class circle{
+     constructor(radius){
+           this.radius=radius;
+     }
+     //getter
+       get diameter(){
+          const diameter = this.radius*2
+            return diameter
+       }
+       set diameter(diameter){
+             this.radius=diameter/2
+       }
+     //getter
+       get area(){
+           var pivalue = Math.PI;
+        //    console.log("Pi value "+pivalue);
+           let areavalue=pivalue*this.radius*this.radius;
+           return areavalue.toFixed(2);
+       }
+};
+
+const c1 = new circle(10);
+console.log(c1.radius);
+console.log(c1.diameter);
+console.log(c1.area);
+c1.diameter=50;
+console.log(c1.radius);
+console.log(c1.area);
+*/
+
+//------------------------------------------------

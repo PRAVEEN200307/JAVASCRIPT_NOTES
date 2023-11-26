@@ -282,3 +282,83 @@ console.log(c1.area);
 */
 
 //------------------------------------------------
+//Understanding static methods and properties in js
+  // static is a class level
+  // * sigleton parttern
+/*
+    class Person{
+        constructor(name){
+        this.name = name;
+        }
+        info(){
+            console.log(this.name);
+        }
+    }
+
+    const personObj = new Person("Tom");
+    personObj.info();
+*/
+/*//-------------
+   //static Examples
+class Myclass{
+       static name="Ronaldo";
+       static nameCallmeathods(){
+           console.log(`My name is ${this.name}`);
+       }
+}
+
+Myclass.nameCallmeathods();
+console.log(Myclass.name);
+
+//Math utilities classes
+    class Mathutilities{
+        static add(a,b){
+           return a+b;
+        }
+        static sub(a,b){
+           return a -b;
+        }
+        static multiple(a,b){
+           return a*b;
+        }
+        static division(a,b){
+            return  a/b;
+        }
+    }
+
+    console.log(Mathutilities.add(10,20));
+    console.log(Mathutilities.sub(10,20));
+    console.log(Mathutilities.multiple(10,20));
+    console.log(Mathutilities.division(10,20));
+*///--------------------------------------------------------
+// Example 2 : Singleton pattern
+            //onely use static meathod
+/*          // inbuild database in mobile applications
+class Database{
+    static instance = null ;
+    static getInstance(){
+        if( !(Database.instance)){
+           Database.instance = new Database();
+        }
+        return Database.instance;
+    }
+    query(sql){   
+    }
+}
+const db1= Database.getInstance();
+const db2= Database.getInstance();
+console.log(db1===db2);
+*/
+//Example 3: constants
+/*
+class Colors{
+    static RED = "#ff0000";
+    static GREEN = "#00ff00";
+    static BLUE = "#0000FF";
+}
+
+console.log(Colors.RED);
+console.log(Colors.GREEN);
+console.log(Colors.BLUE);
+*/
+//----------------------------------------------------------------

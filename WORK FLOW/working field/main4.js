@@ -362,3 +362,79 @@ console.log(Colors.GREEN);
 console.log(Colors.BLUE);
 */
 //----------------------------------------------------------------
+//Prototype and prototypal Inheritance in javascript
+
+  let arr=["apple","orange"];
+
+  let obj={
+    name:"joes",
+    city:"Salem",
+    info:function(){
+        return `${this.name} from ${this.city}`;
+    }
+  }
+
+  function myFunction() {}
+
+/**
+   * array
+   *  arr.__proto__  or Array.prototype
+   * prototype chaining
+   *   arr.__proto__.__proto__ -- object prototye
+   *   arr.__proto__.__proto__.__proto__  = null
+   * Object
+   *   obj.__proto__  //giving object prototype
+   *   obj.__proto__.__proto__  = null
+   * Function
+   *  myfunction.__proto__  //giving function prototype
+   *  myFunction.__proto__.__proto__  //giving object prototype
+   *  myFunction.__proto__.__proto__.__proto__  = null;                      
+ */
+
+//prototype inheritance
+
+let obj1={
+    name:"joes",
+    city:"Salem",
+    info:function(){
+        return `${this.name} from ${this.city}`;
+    }
+  }
+
+// let obj2 ={
+//     name:"Raja",
+//     city:"chennai";
+// }
+
+// obj2.__proto__=obj1;
+
+let obj2 = Object.create(obj1);
+obj2.name="Praveen";
+obj2.city="Chennai";
+
+Array.prototype.doubleLength = function(){
+    return this.length*2;
+}
+
+//Function meathod add custom method
+  //using prototype
+Function.prototype.MyBind = function(){
+    console.log("This is bind function in prototype")
+}
+
+function fun(){
+
+}
+
+function Person(name){
+    this.name=name;
+}
+Person.prototype.greet=function(){
+    console.log(`Hello ,my name is ${this.name}`);
+}
+
+const alice = new Person("Alice");
+const babu = new Person("Babu");
+
+alice.greet();
+babu.greet();

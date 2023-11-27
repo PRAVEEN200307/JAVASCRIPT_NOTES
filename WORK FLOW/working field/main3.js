@@ -8,6 +8,7 @@
     08:21:06 Organizing Data with Objects inside Arrays in JavaScript
 ----------------------------------------------------------------------------
 //function Inside object
+      --funtion Inside object use arrow functions
      this -- defined as the call current object
     const object ={
         Name:"Praveen Kumar",
@@ -54,7 +55,7 @@ const students={
    fun1:function(){
       console.log("Fun 1 :",this.age);
       console.log("Fun 1 :",this);
-      // this function take the gloabl scope
+        // this function take the gloabl scope
       function fun2(){
         console.log("Fun 2 :",this.age);
         console.log("Fun 2 :",this);
@@ -311,7 +312,7 @@ const users =[
     console.log(Age);
     console.log(gender);
 
-    //nested objhet
+    //nested object
     let address={
         street:"Cherry Road",
         city:"Salem",

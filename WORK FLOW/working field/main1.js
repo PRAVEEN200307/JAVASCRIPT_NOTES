@@ -71,7 +71,7 @@
 
     // append 
         firstName +=" kumar";
-        console.log("append : "+firstName)
+        console.log("append : "+firstName);
 
     //Escaping
         c='i don\'t need to write';
@@ -89,7 +89,7 @@
         c=firstName.toLowerCase();
         console.log("Lowercase :",firstName)
 
-    // intext Of
+    // indext Of
         c=firstName.indexOf('n');
         console.log("indexOf n:"+c)
 
@@ -276,7 +276,7 @@
     }
     test(myCallback);
 
-    //setTimeout(function,1000);  --fucntion delay 3,000
+    //setTimeout(function,1000);  --function delay 3,000
         setTimeout(function(){
         console.log("This is the set time out functions")
         },3000)
@@ -672,7 +672,7 @@ console.log(filteredBooks);
 
 // add sum of value
 let number = [1,2,3,4,5,15];
-let sum = number.reduce( (accummulator,currentValue)=>{
+let sum = number.reduce( (accumulator,currentValue)=>{
       return accummulator+=currentValue
 } );
 
@@ -720,7 +720,9 @@ let count =arr2d.flat().reduce( (assumlator,value)=>{
     return assumlator
    },{})
 
-console.log(count);
+  console.log(count);
+  output: 
+     Object { a: 1, b: 1, c: 2, d: 2, f: 2, g: 1 }
 -----------------------------------------------
 
 // Largest of value in array
@@ -924,6 +926,15 @@ const x ={
 console.log(x);
 Array.prototype.reverse.call(x);
 console.log(x);
+
+//String reverse
+
+let position="web developer";
+console.log(position);
+
+let reversed=position.split(``).reverse().join('');
+console.log(reversed);
+
 ------------------------------------------------
 
 //push in javascript
@@ -945,6 +956,28 @@ let user2=["Rajesh","Android developer"];
 
 users1.push(...user2);
 console.log(users1);
+
+Object like array Using push
+
+
+const arrayLike = {
+    length: 3,
+    unrelated: "foo",
+    2: 4,
+  };
+  Array.prototype.push.call(arrayLike, 1, 2);
+  console.log(arrayLike);
+ 
+ // Object { 2: 4, 3: 1, 4: 2, length: 5, unrelated: "foo" }
+
+
+const person ={}
+
+Array.prototype.push.call(person,10,20);
+console.log(person);
+
+////Object { 0: 10, 1: 20, length: 2 }
+
 ----------------------------------------------------
 
 //pop
@@ -956,7 +989,20 @@ console.log(users1);
   console.log(user);
 
   //mission succcessful
-----------------------------------------------------
+
+  //delect the multiple number using array
+   
+    let myArray = [1, 2, 3, 4, 5];
+
+    let iwanThreepop =3;
+
+    for(let i=0;i<iwanThreepop;i++){
+    let popElement =myArray.pop();
+    console.log(popElement);
+    }
+
+    console.log(myArray);
+    ----------------------------------------------------
 */
 
 

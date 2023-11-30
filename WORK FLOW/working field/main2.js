@@ -73,7 +73,7 @@ console.log("index :"+indexValue);
 
     let findIndex = word[0].lastIndexOf('the')
     console.log(findIndex);//42
-
+     //charater start to 1
 //---------------------------------------------------------
 
 //Every & Some function  in javascript
@@ -202,7 +202,7 @@ console.log(b);
 
 //Multiple ways to clone an array in javascript
    Array.map() method:
-let originalArray =[1,2,3];
+  let originalArray =[1,2,3];
 //Spread Operator
     let cloneArray = [...originalArray];
     console.log(cloneArray);

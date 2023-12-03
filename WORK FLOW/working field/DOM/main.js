@@ -124,3 +124,24 @@ console.log(li.length);
  <!--comment>-- comment node
  document node
 */
+
+// ----------------------------------------------
+//traversing in DOM
+
+// DOM tree
+
+//parentNode
+   //parent Node is a parent of the Node is a like a tree
+   let selectPara =document.getElementsByTagName("p");
+   console.log(selectPara);
+   //getting a parentNode
+      const par =selectPara[0].parentNode;
+      console.log(parent);
+   par.style.backgroundColor="palegreen";
+   par.style.padding ="23px";
+  //test getting h1 parent section element
+   let header=document.getElementsByTagName('h1');
+   console.log(header);
+   const h1Parent=header[0].parentNode
+   h1Parent.style.backgroundColor="orange";
+   h1Parent.style.padding="15px";

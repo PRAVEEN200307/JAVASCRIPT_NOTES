@@ -131,17 +131,86 @@ console.log(li.length);
 // DOM tree
 
 //parentNode
+
    //parent Node is a parent of the Node is a like a tree
    let selectPara =document.getElementsByTagName("p");
    console.log(selectPara);
    //getting a parentNode
-      const par =selectPara[0].parentNode;
+      const parent =selectPara[0].parentNode;
       console.log(parent);
-   par.style.backgroundColor="palegreen";
-   par.style.padding ="23px";
+   parent.style.backgroundColor="palegreen";
+   parent.style.padding ="23px";
   //test getting h1 parent section element
    let header=document.getElementsByTagName('h1');
    console.log(header);
    const h1Parent=header[0].parentNode
    h1Parent.style.backgroundColor="orange";
    h1Parent.style.padding="15px";
+
+//----------------------------------------------------------
+//Node in Dom
+//text/comment,element node
+/**
+ * HTML     -         HTML Element Node
+ * HEAD     -         HEAD ELement Node
+ * #title   -        Text Node(return,space)
+ * TITLE    -        TITLE Element Node
+ * $textNode in DOM  Text Node(Node in DOM)
+ * #title   -        Text Node(return)
+ * #Comment -        Commnet Node
+ */
+/*
+ Note:
+  . Space and New Line above the <head> tag are ignored
+  . Space and New Line the <body> tag are moved and placed inside the body tag by Dom                      
+ */
+
+/**
+ * firstChild
+ * lastChild
+ * firstElementChild*
+ * lastElementChild*
+ * 
+ * Example
+*  <body>
+      <section> --parent
+         <h1>This is Heading</h1>--firstElement
+         <div>(parent)---------------------lastElement
+firstChild--<space> <h2>Sample Title</h2>--(firstElementchild)
+            <p>This is Paragraph</p>-(lastElementchild)
+            lastChild--<space>
+         </div>
+      </section>
+      <script src="main.js"></script>
+   </body>
+*/
+
+/*
+//firstChild
+   //line:138
+   //h2 first element child
+   const firstChild =parent.firstChild;
+   console.log(firstChild);
+//lastChild
+   const lastChild =parent.lastChild;
+   console.log(firstChild);
+//FirstElementChild
+   const firstElementChild =parent.firstElementChild;
+   console.log(firstElementChild);
+   firstElementChild.style.color="red";
+//lastElementChild
+   const lastElementChild =parent.lastElementChild;
+   console.log(lastElementChild);
+   lastElementChild.style.color="blue";
+
+//section
+const section =document.getElementsByTagName("Section")[0];
+console.log(section);
+//Section firstChild
+   console.log(section.firstChild);
+//section lastChild
+   console.log(section.lastChild);
+//section fistElementChild
+   console.log(section.firstElementChild);
+   console.log(section.lastElementChild);
+*/

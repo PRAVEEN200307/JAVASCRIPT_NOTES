@@ -30,7 +30,7 @@
   document.getElementsByTagName();     returns an HTMLCollection
   document.querySelector();            returns an element object
   document.querySelectorAll();         returns an Nodelist
-  document.getElementsByName           returns an Nodelist
+  document.getElementsByName()         returns an Nodelist
 
 //  document.getElementById();
    let brand=document.getElementById("brand");
@@ -131,7 +131,7 @@ console.log(li.length);
 // DOM tree
 
 //parentNode
-
+/*
    //parent Node is a parent of the Node is a like a tree
    let selectPara =document.getElementsByTagName("p");
    console.log(selectPara);
@@ -140,13 +140,14 @@ console.log(li.length);
       console.log(parent);
    parent.style.backgroundColor="palegreen";
    parent.style.padding ="23px";
+
   //test getting h1 parent section element
    let header=document.getElementsByTagName('h1');
    console.log(header);
    const h1Parent=header[0].parentNode
    h1Parent.style.backgroundColor="orange";
    h1Parent.style.padding="15px";
-
+*/
 //----------------------------------------------------------
 //Node in Dom
 //text/comment,element node
@@ -214,3 +215,59 @@ console.log(section);
    console.log(section.firstElementChild);
    console.log(section.lastElementChild);
 */
+
+//div
+// const getParent =document.getElementsByTagName('div')[0];
+// console.log(getParent);
+// console.log(getParent.firstElementChild);
+
+//children
+   // const getParent =document.getElementsByTagName('div')[0];
+   // console.log(getParent.children[0]);
+   // console.log(getParent.children[1]);
+
+//Siblings
+/*
+  Section
+  h1     div
+        h1 (h1 to p,nextSibling)  (p to h1,previouSibling)p  
+   nextSibling
+   previousSibling
+   nextElementSibling
+   previousElementSibling
+
+//para
+   const para=document.getElementsByTagName('p')[0];
+   console.log(para);
+   console.log(para.previousSibling);
+   console.log(para.previousElementSibling);
+   console.log(para.nextSibling);
+   //console.log(para.nextElementSibling);
+
+   const headTwo=document.getElementsByTagName('h2')[0];
+   console.log(headTwo);
+   console.log(headTwo.nextSibling);
+   console.log(headTwo.nextElementSibling);
+*//*
+//task sections
+const section = document.getElementsByTagName("section")[0];
+   console.log(section);
+//previousSibling
+   console.log(section.previousSibling);
+//nextSibling
+   console.log(section.nextSibling);
+//previousElementSibling;
+   console.log(section.previousElementSibling);
+//nextElementSibling
+   console.log(section.nextElementSibling);
+
+//Closest
+   //className,idName,tagName
+   const h1_tag =document.querySelector('h1');
+   console.log(h1_tag);
+   const sectionh1 = h1_tag.closest("section");
+   console.log(sectionh1);
+   sectionh1.style.background="#ff00ff";
+   sectionh1.style.color="#ffff";
+   sectionh1.style.padding="20px";
+*///----------------------------------------------------------------------------

@@ -113,5 +113,66 @@ setInval -every time repeat
  * getAttribute()
  * setAttribute()
  */
-
+/*
 //classList.add()
+  const btnAdd = document.querySelector('#btnAdd');
+  const box = document.querySelector(".box")
+  console.log(btnAdd);
+
+  btnAdd.addEventListener("click",function(){
+      box.classList.add('new-color')
+  });
+//classList.remove()
+  const btnRemove = document.querySelector('#btnRemove');
+  console.log(btnRemove);
+
+  btnRemove.addEventListener("click",function(){
+     box.classList.remove('new-color');
+  });
+//classList.toggle()
+  const btnToggle = document.querySelector('#btnToggle');
+  console.log(btnToggle);
+
+  btnToggle.addEventListener('click',function(){
+      box.classList.toggle("new-color");
+  });
+*/
+//getAttribute() and setAttribute
+/*
+  let btnClick=document.querySelector("#btnClick");
+  let input=document.querySelector('#txtName');
+
+  btnClick.addEventListener('click',function(){
+    const getAtt = input.getAttribute("type");
+    if(getAtt =="text"){
+        input.setAttribute("type","password");
+    }
+    else{
+      input.setAttribute("type","text");
+    }
+  });
+  --------------------------------------------------
+*/
+/**
+ * hasAttribute()
+     Attribute is present is true otherwise is false
+ * getAttributeNames()
+ * removeAttribute()
+ */
+/*
+  //hasAttribute()
+  const input=document.querySelector('input');
+  console.log(input.hasAttribute('class'));
+
+  //getAttributeNames()
+    //how many attribute present
+    //attribute name stored in array format
+  let list=input.getAttributeNames();
+  console.log(list);
+
+  //removeAttribute()
+    //remove attribute names
+  input.removeAttribute('name');
+  list=input.getAttributeNames();
+  console.log(list);
+*/

@@ -261,7 +261,7 @@ const section = document.getElementsByTagName("section")[0];
 //nextElementSibling
    console.log(section.nextElementSibling);
 
-//Closest
+//Closest --getting a parent
    //className,idName,tagName
    const h1_tag =document.querySelector('h1');
    console.log(h1_tag);
@@ -271,3 +271,4 @@ const section = document.getElementsByTagName("section")[0];
    sectionh1.style.color="#ffff";
    sectionh1.style.padding="20px";
 *///----------------------------------------------------------------------------
+

@@ -303,6 +303,11 @@ function handleKeyEvent(event){
   console.log('Event type :',keyCode);
   console.log('Event type :',keyName);
 }
+ 
+   Ex output 1:
+     Event type : keydown
+     Event type : KeyW
+     Event type : w
 */
 //--------
 const input =document.getElementById('input-num');

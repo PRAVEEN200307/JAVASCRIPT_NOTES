@@ -111,6 +111,7 @@ setInval -every time repeat
  * classList.remove()
  * classList.toggle()
  * getAttribute()
+ *   //find the type of value
  * setAttribute()
  */
 /*
@@ -141,7 +142,7 @@ setInval -every time repeat
 /*
   let btnClick=document.querySelector("#btnClick");
   let input=document.querySelector('#txtName');
-
+     //console.log(getAtt); //giving value ex text
   btnClick.addEventListener('click',function(){
     const getAtt = input.getAttribute("type");
     if(getAtt =="text"){
@@ -175,4 +176,105 @@ setInval -every time repeat
   input.removeAttribute('name');
   list=input.getAttributeNames();
   console.log(list);
+------------------------------------------------------*/
+/*
+ Event Hundlers
+ --------------
+   Inline event listeners (!byday not useit)
+   Inline properties (!byday not useit)
+   Event listeners (Now day using working with origanize) 
+
+Inline event listeners
+    <button onclick="alert('welcome to Dom')">Click</button>                        
+
+Inline properties
+  { <script>
+  document.getElementById('btn').onclick =function(){
+    alert("welcome inline Properties")
+  }
+  </script> }
+
+//evevnt listeners.
+  const btn =document.querySelector(".btn");
+  btn.addEventListener('click',function(){
+    alert("Welcome to event listeners");
+  });
+  
+  Event Listeners
+  ---------------
+  Event
+    1.Mouse
+      click
+      dblclick
+      mosuedown
+      mouseout
+      mouseup
+      mouseover
+
+    2.keyboard
+      keydown
+      keypress
+      keyup
+      keycode
+      code
+
+    3.form
+      focus
+      submit
+      blur
+      change
+
+    4.Touch
+      touchstart
+      touchmove
+      touchend
+      touchcancel
+      
+    5.window
+      scroll
+      resize
+      load
+      haschange 
+
+-----------------------------------------*/
+/**
+1.Mouse
+   click
+   dblclick
+   mosuedown
+   mouseout
+   mouseup
+   mouseover
+
+
+//click
+  const btn=document.querySelector('.btn');
+
+  btn.addEventListener('click',()=>{
+    alert("this is a click Event Properties");
+  });
+
+//dblclick
+  const btn=document.querySelector('#dblBtn');
+  btn.addEventListener('dblclick',function(){
+    alert("This is a dbl click Event");
+  });
 */
+//mosuedown
+    //while pressing the button logic is working
+   const eventBtn=document.getElementById("event");
+   eventBtn.addEventListener(('mousedown'),()=>{
+      eventBtn.style.backgroundColor ="Red";
+   });
+//mouseout 
+  eventBtn.addEventListener('mouseout',()=>{
+    eventBtn.style.backgroundColor="yellow";
+  });
+//mouseup --reliase the button
+  eventBtn.addEventListener('mouseup',()=>{
+    eventBtn.style.backgroundColor="blue";
+  });
+//mousehover
+eventBtn.addEventListener('mouseover',()=>{
+  eventBtn.style.backgroundColor="pink";
+});

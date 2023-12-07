@@ -19,18 +19,18 @@
     </style>
 </head>
 <body>
-    <!--
-    <div class="box">
-         <h3>Box</h3>
-    </div>
-    <button id="btnAdd">Add</button>
-    <button id="btnRemove">Remove</button>
-    <button id="btnToggle">Toggle</button>
-    -->
-    <input type="text" id="txtName" class="getInput" name=""/>
-    <button id="btnClick">Click</button>
-
+    
+    <!-- <button onclick="alert('welcome to Dom')">Inline event</button>   -->
+    <button id="btn">Inline properties</button>
+    <button class="btn">Event properties</button>
+    <button id="dblBtn">Dblclick</button><br>
+    <button id="event" style="margin-top:15px;">Event</button>
     <script src="main.js"></script>
     <script src="main1.js"></script>
+    <script>
+       document.getElementById('btn').onclick =function(){
+         alert("welcome inline Properties")
+       }
+    </script>
 </body>
 </html>

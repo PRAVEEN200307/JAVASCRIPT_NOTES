@@ -259,7 +259,7 @@ Inline properties
   btn.addEventListener('dblclick',function(){
     alert("This is a dbl click Event");
   });
-*/
+
 //mosuedown
     //while pressing the button logic is working
    const eventBtn=document.getElementById("event");
@@ -277,4 +277,49 @@ Inline properties
 //mousehover
 eventBtn.addEventListener('mouseover',()=>{
   eventBtn.style.backgroundColor="pink";
+});
+----------------------------------------------------------------------
+*/
+/**
+  2.keyboard
+     keydown
+       -this is first triger
+     keypress(deprecated)
+     keyup
+    key
+    code
+*/
+/*
+document.addEventListener("keydown",handleKeyEvent);
+document.addEventListener("keypress",handleKeyEvent);
+document.addEventListener("keyup",handleKeyEvent);
+
+function handleKeyEvent(event){
+  const evenType =event.type;
+  const keyCode=event.code;
+  const keyName=event.key;
+
+  console.log('Event type :',evenType);
+  console.log('Event type :',keyCode);
+  console.log('Event type :',keyName);
+}
+*/
+//--------
+const input =document.getElementById('input-num');
+const msg =document.getElementById('error');
+
+//isNaN --is not a number
+//event.preventDefault()
+    //this meathod use to won't allow the number
+input.addEventListener('keydown',function(event){
+   const key = event.key;
+   console.log(key);
+   if(isNaN(key)){
+     event.preventDefault();
+     msg.textContent="Please Enter Number only";
+     msg.style.color="red";
+   }
+   else{
+     msg.textContent="";
+   }
 });

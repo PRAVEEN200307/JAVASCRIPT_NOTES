@@ -11,24 +11,32 @@
          box-sizing: border-box;
          font-family:"poppins",sans-serif;
        }
-       h1{
+       h3{
          text-transform: uppercase;
          font-size:small;         
        }
-       #touchArea{
-          height:200px;
-          width:400px;
-          background-color: gray;
-          text-align: center;
-          line-height:200px;
-          color:#fff;
-          font-size:larger;
-       }
+      #game{
+        width:400px;
+        height:200px;
+        background-color: #ddd;
+        position: relative;
+      }
+      #ball{
+        width:25px;
+        height:25px;
+        background-color: red;
+        border-radius:50%;
+        position: absolute;
+        top: 75px;
+        left: 75px;
+      }
     </style>
 </head>
 <body>
-    <h3>Touch Events in javascript</h3>
-     <div id="touchArea">Touch Me</div>
+    <h3>Simple Ball Game</h3>
+    <div id="game">
+       <div id="ball"></div>
+    </div>
     <script src="main.js"></script>
     <script src="main1.js"></script>
 </body>

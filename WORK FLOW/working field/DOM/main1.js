@@ -420,7 +420,7 @@ userName.addEventListener("blur",function(e){
   touchmove
   touchend
   touchcancel
-*/
+
 //touchstart -- equal to mouse down event
 //touchmove
 //tocuhend -- equal to mouse up
@@ -450,4 +450,40 @@ touchArea.addEventListener("touchcancel",(e)=>{
   touchArea.style.backgroundColor="gray";
   touchArea.textContent="Touch cancelled !";
 });
+*/
+//----------------------------------------------------
 
+const game =document.getElementById("game");
+const ball =document.getElementById("ball");
+//aixs
+let startX,startY;
+
+game.addEventListener("touchstart",function(e){
+   //console.log(e);
+   const touch = e.changedTouches[0];
+      startX=touch.clientX;
+      startY=touch.clientY;
+
+
+      // console.log(startX);
+      // console.log(startY)
+});
+
+/*
+changedTouches: TouchList
+0: Touch
+clientX: 156
+clientY: 72.66667175292969  
+*/
+
+game.addEventListener("touchmove",function(e){
+  //console.log(e);
+  const touch = e.changedTouches[0];
+  const diffx =touch.clientX-startX
+  const diffY =touch.clientY-startY;
+  ball.style.left =Math.max(0,Math.min(350,ball.offsetLeft + diffx)) +"px";
+  ball.style.top =Math.max(0,Math.min(180,ball.offsetTop +diffY)) +"px";
+  startX=touch.clientX;
+  startY=touch.clientY;
+  e.preventDefault();                                                
+});

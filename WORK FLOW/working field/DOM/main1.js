@@ -339,7 +339,7 @@ input.addEventListener('keydown',function(event){
       focus
       input
       blur
- */
+
 const form=document.querySelector("form");
 const userName=document.querySelector("#username");
 const email=document.querySelector("#email");
@@ -395,12 +395,12 @@ userName.addEventListener("input",function(e){
    console.log("User input changed  :"+e.target.value);
 });
 
-/*
+
   User input changed  :A
   User input changed  :An
   User input changed  :Anb
   User input changed  :Anbu
- */
+
 
 //focus
 userName.addEventListener("focus",function(e){
@@ -412,3 +412,42 @@ userName.addEventListener("focus",function(e){
 userName.addEventListener("blur",function(e){
   userName.style.borderColor ="#000";
 });
+*/
+//---------------------------------------
+/*
+  4.Touch
+  touchstart
+  touchmove
+  touchend
+  touchcancel
+*/
+//touchstart -- equal to mouse down event
+//touchmove
+//tocuhend -- equal to mouse up
+//  touchcancel --touch cancel -wprk in mobile
+
+const touchArea = document.getElementById('touchArea');
+touchArea.addEventListener("touchstart",(e)=>{
+  e.preventDefault();
+  touchArea.style.backgroundColor="blue";
+  touchArea.textContent="Touch started"
+});
+
+touchArea.addEventListener("touchmove",(e)=>{
+  e.preventDefault();
+  touchArea.style.backgroundColor="green";
+  touchArea.textContent="Touch moved"
+});
+
+touchArea.addEventListener("touchend",(e)=>{
+  e.preventDefault();
+  touchArea.style.backgroundColor="gray";
+  touchArea.textContent="Touch Ended"
+});
+
+touchArea.addEventListener("touchcancel",(e)=>{
+  e.preventDefault();
+  touchArea.style.backgroundColor="gray";
+  touchArea.textContent="Touch cancelled !";
+});
+

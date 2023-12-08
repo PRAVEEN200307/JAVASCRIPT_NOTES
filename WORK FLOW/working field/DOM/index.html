@@ -5,25 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom event</title>
     <style>
-      .box{
-         width:150px;
-         height:150px;
-         background-color:palegreen;
-         text-align: center;
-         line-height:150px;
-      }
-      .new-color{
-        color: orange;
-        background-color: black;
-      }
+       *{
+         margin:0;
+         padding:0;
+         box-sizing: border-box;
+         font-family:"poppins",sans-serif;
+       }
+       body{
+         width:100vw;
+         height:100vh;
+         background-color: palegreen;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+       }
+       h1{
+         text-transform: uppercase;
+         font-size:small;         
+       }
+       form{
+         background-color: #fff;
+         padding:10px;
+       }
+       .form-group label{
+          display: block;
+          margin:10px 0px ;
+          font-size:12px;
+       }
+       input[type="text"],
+       input[type="email"]{
+           width:100%;
+           outline:none;
+           font-size:12px;
+           padding:2px 0px;
+       }
+       .form-group select{
+         width:100%;
+       }
+       fieldset{
+          border: none;
+          margin-top: 10px;
+       }
+       button{
+          background-color:#000;
+          color: #fff;
+          padding:4px 25px;
+          border: none;
+          margin-top:18px;
+          cursor: pointer;
+       }
     </style>
 </head>
 <body>
-    <h1>Keyboard Event in javascript</h1>
-    <p>Press Any key</p>
-    <label for="input-num">Enter a number</label>
-    <input type="text" name="input-num" id="input-num">
-    <p id="error"></p>
+    <form action="#" autocomplete="off">
+        <h1>Form Events in javaScipts</h1>
+        <div class="form-group">
+          <label for="username">user Name</label>
+          <input type="text" name="" id="username">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="" id="email">
+        </div>
+        <div class="form-group" >
+          <label for="course">Course Name</label>
+          <select name="" id="course">
+            <option value="">Select Course</option>
+            <option value="">C</option>
+            <option value="">C++</option>
+            <option value="">Java</option>
+          </select>
+        </div>
+        <div class="form-group" style="font-size: 12px;" >
+          <fieldset style="display:flex;align-items: center;">
+              <legend>Gender</legend>
+              <label for="">
+                <input type="radio" name="Gender" value="male" >Male
+              </label>
+              <label for="">
+                <input type="radio" name="Gender" value="female" style="margin-left:8px;">Female
+              </label>
+          </fieldset>
+        </div>
+        <input type="checkbox" id="agree">
+        <label for="agree" style="font-size:small;">I Agree all condition</label>
+        <div class="form-group">
+          <button type="submit">submit</button>
+          <button type="reset">Reset</button>
+        </div>
+    </form>
     <script src="main.js"></script>
     <script src="main1.js"></script>
 </body>

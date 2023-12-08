@@ -308,7 +308,7 @@ function handleKeyEvent(event){
      Event type : keydown
      Event type : KeyW
      Event type : w
-*/
+
 //--------
 const input =document.getElementById('input-num');
 const msg =document.getElementById('error');
@@ -327,4 +327,88 @@ input.addEventListener('keydown',function(event){
    else{
      msg.textContent="";
    }
+});
+*/
+//-------------------------------------------------------------------
+/*
+ 3.form Event in javascript
+      submit
+      reset
+      change
+      checked
+      focus
+      input
+      blur
+ */
+const form=document.querySelector("form");
+const userName=document.querySelector("#username");
+const email=document.querySelector("#email");
+const course=document.querySelector("#course");
+const checked=document.querySelector("#agree");
+const radios=document.querySelectorAll('input[name="Gender"]');
+
+//wont referes
+  //preventDefault();
+
+//Summit  
+  // form.addEventListener("submit",function(even){
+  //   even.preventDefault();
+  //   console.log("User Name :"+userName.value);
+  //   console.log("User Email :"+email.value);
+  // });
+
+//change
+course.addEventListener("change",function(e){
+  const selectedCourse =e.target.value;
+  console.log("Selected Course  :",selectedCourse);
+});
+
+//Rest OverRide
+form.addEventListener("reset",function(even){
+  console.log("your data is reset successfully");
+});
+
+//checked
+form.addEventListener("submit",function(even){
+  even.preventDefault();
+  console.log("User Name :"+userName.value);
+  console.log("User Email :"+email.value);
+
+  let selectedCourse ="";
+  radios.forEach((radio)=>{
+       if(radio.checked){
+          selectedCourse = radio.value;
+       }
+  });
+  console.log(selectedCourse);
+});
+
+checked.addEventListener('change',function(e){
+  if(e.target.checked){
+       console.log("checkbox is checked")
+  }else{
+      console.log("Checkbox is unchecked")
+  }
+});
+//input
+userName.addEventListener("input",function(e){
+   console.log("User input changed  :"+e.target.value);
+});
+
+/*
+  User input changed  :A
+  User input changed  :An
+  User input changed  :Anb
+  User input changed  :Anbu
+ */
+
+//focus
+userName.addEventListener("focus",function(e){
+  userName.style.borderColor ="orange";
+});
+
+//blur
+  //Out of foucs
+userName.addEventListener("blur",function(e){
+  userName.style.borderColor ="#000";
 });

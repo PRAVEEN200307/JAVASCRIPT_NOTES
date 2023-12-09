@@ -547,29 +547,35 @@ game.addEventListener("touchmove",function(e){
       resize
       haschange 
 
- */
+
 //scroll
-// window.addEventListener("scroll",()=>{
-//    console.log("Scrolled");
-   
-// });
+  window.addEventListener("scroll",()=>{
+    console.log("Scrolled");
+    
+  });
 
 //resize
 
-// const container = document.querySelector(".container");
+  const container = document.querySelector(".container");
 
-// const observer=new ResizeObserver((items)=>{
-//   let containerwidth = Math.ceil(items[0].contentRect.width);
+  const observer=new ResizeObserver((items)=>{
+    let containerwidth = Math.ceil(items[0].contentRect.width);
 
-//   if(containerwidth <400){
-//     items[0].target.style.backgroundColor="red";
-//   }
-//   else{
-//     items[0].target.style.backgroundColor="#212121";
-//   }
-// });
+    if(containerwidth <400){
+      items[0].target.style.backgroundColor="red";
+    }
+    else{
+      items[0].target.style.backgroundColor="#212121";
+    }
+  });
 
-// observer.observe(container);
+  observer.observe(container);
 
 
-//haschange 
+//hashchange 
+
+  window.addEventListener('haschange',function(){
+    console.log('hey,hash has been changed');
+  });
+ 
+  */

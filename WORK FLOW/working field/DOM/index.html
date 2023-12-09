@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom event</title>
     <style>
-      .container{
-         background-color: #000;
-         height: 400px;
-      }
+
     </style>
 </head>
 <body>
-    <div class="container">
-      
-    </div>
+    <h2>onhaschange meathods</h2>
     <script src="main.js"></script>
     <script src="main1.js"></script>
-
+    <script>
+        window.addEventListener('haschange',function(){
+            console.log('hey,hash has been changed');
+        });
+    </script>
 </body>
 </html>
 <!-- parse -->

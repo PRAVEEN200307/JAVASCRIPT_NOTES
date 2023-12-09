@@ -452,7 +452,7 @@ touchArea.addEventListener("touchcancel",(e)=>{
 });
 */
 //----------------------------------------------------
-
+/*
 const game =document.getElementById("game");
 const ball =document.getElementById("ball");
 //aixs
@@ -474,7 +474,7 @@ changedTouches: TouchList
 0: Touch
 clientX: 156
 clientY: 72.66667175292969  
-*/
+
 
 game.addEventListener("touchmove",function(e){
   //console.log(e);
@@ -487,3 +487,67 @@ game.addEventListener("touchmove",function(e){
   startY=touch.clientY;
   e.preventDefault();                                                
 });
+
+-----------------------------------------------------------------------------
+*/
+ /*     
+    DomcontentLoaded 
+      it is document content loaded is only working passes the cache memeory
+    load
+      it is load the code perfectly in css and iamge
+    onload
+    unload 
+    unberforeload
+
+           document.addEventListener('DOMContentLoaded',()=>{
+             //reference
+             const myApp =document.getElementById("app");
+             const heading = myApp.children[0];
+             const image = myApp.children[1];
+             heading.innerHTML="<h1>Hello praveen</h1>";
+            
+               console.log(image.offsetWidth,image.offsetHeight);
+
+           });
+
+           window.addEventListener('load',()=>{
+             //reference
+             const myApp =document.getElementById("app");
+             const heading = myApp.children[0];
+             const image = myApp.children[1];
+             heading.innerHTML="<h1>Hello praveen</h1>";
+            
+               console.log(image.offsetWidth,image.offsetHeight);
+
+           });
+
+           window.onload=function(){
+               load the css ,image
+            const myApp =document.getElementById("app");
+             const heading = myApp.children[0];
+             const image = myApp.children[1];
+             heading.innerHTML="<h1>Hello praveen</h1>";
+            
+               console.log(image.offsetWidth,image.offsetHeight);
+
+           }
+          //unload
+           window.unload =function(){
+             alert("you are bout to be unloaded")
+           }
+          //preunload
+          window.unberforeload =function(){
+             alert("you are bout to be unloaded")
+           }
+--------------------------------------------------------------------------
+*/
+/**
+     5.window
+      scroll
+      resize
+      load
+      haschange 
+
+ */
+
+

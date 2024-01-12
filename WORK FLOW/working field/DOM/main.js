@@ -217,11 +217,12 @@ console.log(section);
 */
 
 //div
-// const getParent =document.getElementsByTagName('div')[0];
+// const getParent=document.getElementsByTagName('div')[0];
 // console.log(getParent);
 // console.log(getParent.firstElementChild);
 
-//children
+//children*
+//---------
    // const getParent =document.getElementsByTagName('div')[0];
    // console.log(getParent.children[0]);
    // console.log(getParent.children[1]);

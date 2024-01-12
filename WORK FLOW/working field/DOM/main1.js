@@ -412,7 +412,7 @@ userName.addEventListener("focus",function(e){
 userName.addEventListener("blur",function(e){
   userName.style.borderColor ="#000";
 });
-*/
+*/      
 //---------------------------------------
 /*
   4.Touch
@@ -579,3 +579,25 @@ game.addEventListener("touchmove",function(e){
   });
  
   */
+
+
+  //html references
+  // console.dir(document.documentElement.lang)
+
+  // console.log(document.head);
+  // console.log(document.body);
+
+  // console.log(document.body.constructor.name);
+  
+
+  // console.log(document.body instanceof HTMLBodyElement);
+  // console.log(document.body instanceof HTMLElement);
+  // console.log(document.body instanceof Element);
+  // console.log(document.body instanceof Node);
+  // console.log(document.body instanceof EventTarget);
+  
+  //nodetype
+  //console.log(document.body.nodeType) 
+       //Node.Element_node(1);
+       //Node.Attribute_node(2); 
+  //console.log(document.body.nodeName)

@@ -93,7 +93,7 @@ function total(eng,mat){
 total(90,90);
 total.call(user,90,90);
 
-// appy meathods
+// apply meathods
     // multiple premeter give a single parameter using array
 total.apply(user,[50,50]); 
 let subjects =[100,100];
@@ -171,15 +171,15 @@ student.eligiblity();
     console.log(personObj);
     personObj.sayHello();
     //Inheritance
-    class Student extends Person{
-        constructor(name,age){
-            super(name);
-            this.age=age;
+        class Student extends Person{
+            constructor(name,age){
+                super(name);
+                this.age=age;
+            }
+            eligiblity(){
+                console.log(this.name+" age is "+this.age+""+(this.age>=18? " Eligible":" Not Eligible"));
+            }
         }
-        eligiblity(){
-            console.log(this.name+" age is "+this.age+""+(this.age>=18? " Eligible":" Not Eligible"));
-        }
-    }
 
     let student = new Student("Dhinesh",18);
     // console.log(student);
@@ -212,11 +212,12 @@ const person={
 }
 console.log(person);
 console.log(person.firstName);
- //getter is use do need to function parameter
+ //getter is use don't need to function parameter
 console.log(person.fullName);
 //set is set a value
 person.firstName="Parthi ban";
 */
+
 /*
 class Person{
     constructor(firstName,lastName){
@@ -332,7 +333,7 @@ console.log(Myclass.name);
     console.log(Mathutilities.division(10,20));
 *///--------------------------------------------------------
 // Example 2 : Singleton pattern
-            //onely use static meathod
+            //only use static meathod
 /*          // inbuild database in mobile applications
 class Database{
     static instance = null ;
@@ -363,6 +364,7 @@ console.log(Colors.BLUE);
 */
 //----------------------------------------------------------------
 //Prototype and prototypal Inheritance in javascript
+//Add the custom meathod
 /*
   let arr=["apple","orange"];
 
@@ -413,7 +415,7 @@ console.log(Colors.BLUE);
     obj2.city="Chennai";
 
     //----------
-
+Add the custom meathod
     Array.prototype.doubleLength = function(){
         return this.length*2;
     }
@@ -427,6 +429,10 @@ console.log(Colors.BLUE);
     function fun(){
 
     }
+     
+    Object.prototype.info = function(){
+    return `${this.name} from ${this.city}`;
+}
 
     function Person(name){
         this.name=name;

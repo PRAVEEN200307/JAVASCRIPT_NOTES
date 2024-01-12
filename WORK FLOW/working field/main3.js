@@ -86,7 +86,7 @@ takeObject()
        .object
     * Destructuring in function parameters
     * swapping
-//Array destructuring :
+//Array destructuring:
 //Before ES6
 const Numbers = [1,2,3,4,5];
 const first = Numbers[0];
@@ -99,7 +99,7 @@ console.log(value);
 
 // es6:
 const number = [1,2,3,4,5];
-const [first,second,...rest] = number;
+const [first,second,...spread] = number;
 console.log(first);
 console.log(second);
 console.log(rest);
@@ -155,7 +155,7 @@ Destruturing in function parameter
 
     function printPerson({name,age}){
         console.log(`Name:${name},age:${age}`);
-    }
+    };
 
     printPerson(person);
     //Output : Name:Praveen,age:20

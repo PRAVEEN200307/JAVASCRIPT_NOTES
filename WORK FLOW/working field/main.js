@@ -111,8 +111,6 @@
   //   let date = new Date().getMinutes();
   //   console.log(date);
 
-
-
 // let a="my phone numer "+98945831+ " my name is praveen and my github username praveen"+200307
 // console.log(a);
 

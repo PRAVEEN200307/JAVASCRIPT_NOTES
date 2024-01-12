@@ -25,7 +25,28 @@
     //localStorage.removeItem('name');
     console.log(userName);
  */
+ const btn=document.querySelector('#night-btn');
  
+   document.addEventListener('DOMContentLoaded',()=>{
+      const stative=localStorage.getItem('perforanceColor');
+
+      if(stative === 'night-mood'){
+        const profileEl=document.querySelector('.user-profile');
+        profileEl.classList.toggle('night-mood');   
+      }
+   });
+
+
+  const handleNightMood =()=>{
+     const profileEl=document.querySelector('.user-profile');
+     profileEl.classList.toggle('night-mood');
+
+     const isThere=profileEl.classList.contains('night-mood');
+     
+     localStorage.setItem('perforanceColor',isThere?'night-mood':'light-mood');
+
+  }
+ btn.addEventListener('click',handleNightMood);
 //-----------------------------------------------------------------------------
 /*
     Promise in JavaScript

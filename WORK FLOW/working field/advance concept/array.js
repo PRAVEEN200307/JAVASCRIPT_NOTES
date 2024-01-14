@@ -79,10 +79,12 @@ const handleEdit = (e) => {
 
 //handling delect button
 const handleDelete = (e) => {
+   if(confirm('Are you sure to Delete')){
     const index = e.target.dataset.index
     const productArrayList = JSON.parse(localStorage.getItem('getItems')) || [];
     productArrayList.splice(index, 1);
 
     localStorage.setItem('getItems', JSON.stringify(productArrayList));
     loadstoredData();
+   }
 }

@@ -1,0 +1,93 @@
+/* style in css  */
+body {
+    background-color: rgb(232, 236, 245);
+}
+
+.container {
+    max-width: 600px;
+    background-color: #fff;
+    margin: 13px auto;
+    padding: 15px;
+    border-radius: 2px;
+    border: 1px solid #a6a0a0;
+}
+
+h1 {
+    color: #ff0000;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+h2 {
+    color: orange;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 12px 0;
+}
+
+form div label {
+    padding-left: inherit;
+}
+
+form div * {
+    display: block;
+    height: 23px;
+    padding-left: 13px;
+    margin-bottom: 4px;
+    width: 250px;
+}
+
+button {
+    padding: 5px 15px;
+    margin: 4px 0;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    padding: 15px;
+}
+
+th,
+td {
+    padding: 6px 5px;
+    border-bottom: 1px solid #847f7f;
+
+}
+
+tbody tr:hover {
+    background-color: #dce3f3;
+}
+
+.model {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.model-content {
+    background-color: #fff;
+    width: 50%;
+    margin: 15% auto;
+    padding: 20px;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close:hover {
+    color: black;
+}

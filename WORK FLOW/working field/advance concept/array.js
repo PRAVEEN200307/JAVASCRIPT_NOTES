@@ -1,127 +1,212 @@
-//Store array of Objects
 
-document.addEventListener('DOMContentLoaded', () => {
-    const model = document.querySelector('.model');
-    const closeBtn = document.querySelector('.close');
-    const formEl = document.forms.dataForm;
+//  const promise = new Promise((resolve,reject)=>{
+//     const sum = 1+1;
+//     if(sum == 2){
+//        resolve("Yeah it is correct")
+//     }else{
+//        reject("No it is'nt correct ")
+//     }
+//  });
 
-    formEl.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const form = formEl.elements;
-        const fullName = form.nameInput.value.trim();
-        const age = parseInt(form.ageInput.value);
-        const gender = form.genderSelect.value;
+//  promise
+//  .then(msg=>console.log(msg))
+//  .catch(error=>console.error(error))
 
-        if (fullName !== '' && !isNaN(age) && gender !== '') {
-            const user = {
-                name: fullName,
-                age,
-                gender
-            }
-            addLocalStorage(user);
-            loadStoredData();
-            formEl.reset();
-        } else {
-            alert("Please fill all detail")
-        }
+//------------------------------------
+
+// function setTimeoutPromise(duration) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(resolve, duration);
+//     });
+// }
+
+// setTimeoutPromise(2000).
+//     then((msg) => {
+//       console.log('sucess')
+//     });
+
+//----------------------------------------------
+//call back hall
+
+// setTimeout(() => {
+//     console.log("Normal :1");
+//     setTimeout(() => {
+//         console.log("Normal :2");
+//         setTimeout(() => {
+//             console.log("Normal :3");
+//         }, 250)
+//     }, 250)
+// }, 250)
+
+//----------------------------------------------
+// function setTimeoutPromise(duration) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(resolve, duration);
+//     });
+// }
+
+// setTimeoutPromise(250).
+//     then((msg) => {
+//         console.log('Normal setTime :1');
+
+//         setTimeoutPromise(250).
+//             then((msg) => {
+//                 console.log('Normal setTime :2');
+
+//                 setTimeoutPromise(250).
+//                     then((msg) => {
+//                         console.log('Normal setTime :2');
+//                     })
+//             })
+//     });
+//---------------------------------------------------------------
+
+// function setTimeoutPromise(duration) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(resolve, duration);
+//     });
+// };
+// //meathod chaining
+// setTimeoutPromise(250).then(()=>{
+//     console.log("Smart :1");
+//     return setTimeoutPromise(250);
+// }).then(()=>{
+//     console.log("Smart :2");
+//     return setTimeoutPromise(250);
+// }).then(()=>{
+//     console.log("Smart :3");
+//     return setTimeoutPromise(250);
+// });
+
+//----------------------------------------------------------------------------
+//Add Event using Promsie
+
+// const button = document.getElementById('btn');
+
+// function addEventPromise(element, method) {
+//     return new Promise((resolve, reject) => {
+//         element.addEventListener(method, resolve)
+//     });
+// }
+
+// addEventPromise(button, 'click').then((e) => {
+//     console.log('clicked');
+//     console.log(e);
+// });
+
+//----------------------------------------------------------------------------------
+//Handle multiple promise funtions
+/*
+console.log(Promise.resolve("Good"));
+
+//It is like every meathod
+Promise.all([Promise.resolve("Good"), Promise.resolve("Good"),
+Promise.resolve("Good")])
+    .then((msg) => {
+        console.log(msg);
+    })
+    .catch((err) => {
+        console.error(err);
     });
 
-    const formEdit = document.forms.editDataForm;
-    formEdit.addEventListener("submit", (e) => {
-        e.preventDefault();
+//It is some meathod
+//it is executed sequencial order
+Promise.any([Promise.resolve("Good"), Promise.reject("Error"),
+Promise.resolve("Good")])
+    .then((msg) => {
+        console.log(msg);
+    })
+    .catch((err) => {
+        console.error(err);
+    });
 
-        const formElement = document.forms.editDataForm.elements;
-        const index = formElement.editIndex.value
-        const fullName = formElement.editNameInput.value
-        const age = formElement.editAgeInput.value;
-        const gender = formElement.editGenderSelect.value;
-
-        if (fullName !== '' && !isNaN(age) && gender !== '') {
-            const data = JSON.parse(localStorage.getItem('myData'));
-            data[index].name = fullName;
-            data[index].age = age;
-            data[index].gender = gender;
-            localStorage.setItem('myData', JSON.stringify(data));
-            loadStoredData();
-            model.style.display = 'none';
-        }
-        else {
-            alert("Plese fill all detail");
-        }
-
+//race
+  //running on the road
+Promise.race([Promise.resolve("Good_Race"), Promise.reject("Error"),
+Promise.resolve("Good")])
+    .then((msg) => {
+        console.log(msg);
+    })
+    .catch((err) => {
+        console.error(err);
     });
 
 
+//allsettled 
+ //allsettled giving status all the promise 
+ //dont'see check resolve and reject giving array of object information
+Promise.allSettled([Promise.resolve("Good"), Promise.reject("Error"),
+Promise.resolve("Good")])
+    .then((msg) => {
+        console.log(msg);
+    })
 
-    function addLocalStorage(user) {
-        const storedData = JSON.parse(localStorage.getItem('myData')) || [];
-        storedData.push(user);
-        localStorage.setItem('myData', JSON.stringify(storedData));
-    }
 
-    loadStoredData();
+//final
+const promise = Promise.resolve('conform');
 
+promise.then((msg) => {
+    console.log(msg);
+})
+    .catch(err => console.error(err))
+    .finally(()=>console.log("All completed.."))
+*/
 
-    //Function to close the model
-    closeBtn.addEventListener('click', () => {
-        model.style.display = 'none';
+//----------------------------------------------------------------------------------
+/*
+const getpost = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const posts = ["Post-1", "Post-2", "Post-3"]
+            resolve(posts);
+        }, 1000)
     });
+};
 
-    window.addEventListener('click', (e) => {
-        if (e.target === model) {
-            model.style.display = 'none';
-        }
+const getCommit = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const comment = ["Comment-1", "Comment-2", "Comment-3"]
+            resolve(comment);
+        }, 1000)
     });
+};
 
-    function loadStoredData() {
-        const tableBody = document.querySelector('#dataList');
-        const storedData = JSON.parse(localStorage.getItem("myData")) || [];
-        tableBody.innerHTML = '';
-        storedData.forEach((data, index) => {
-            const tr = document.createElement('tr');
-            tr.innerHTML = `
-        <td>${data.name}</td>
-        <td>${data.age}</td>
-        <td>${data.gender}</td>
-        <td><button data-index=${index} id="editBtn">Edit</button></td>
-        <td><button  data-index=${index} id="deleteBtn">Delete</button></td>
-        `;
-            tableBody.appendChild(tr);
-        });
+Promise.all([getpost(), getCommit()])
+    .then((result) => console.log(result))
+    .catch((err) => {
+      console.log(err);
+    })
+*/
 
+// fetch('https://jsonplaceholder.typicode.com/users')
+// .then( (response)=>response.json())
+//  .then(text => console.log(text))
+//  .catch(text =>{
+//     console.error(text);
+//  })
 
-        const editBtns = document.querySelectorAll("#editBtn");
-        editBtns.forEach(values => {
-            values.addEventListener('click', (e) => {
-                model.style.display = 'block';
-                const storedData = JSON.parse(localStorage.getItem('myData') || [])
-                const index = e.target.dataset.index
-                const userData = storedData[index];
+//----------------------------------------------------------------------------------------------------------------------------------------
+//Async await in javascript
 
-                const formElement = document.forms.editDataForm.elements;
-                formElement.editIndex.value = index;
-                formElement.editNameInput.value = userData.name;
-                formElement.editAgeInput.value = userData.age;
-                formElement.editGenderSelect.value = userData.gender;
-            })
-        });
+// async function welcome(){
+//     return "Hello World";
+// }
 
-        const deleteBtns = document.querySelectorAll("#deleteBtn");
-        deleteBtns.forEach(values => {
-            values.addEventListener('click', (e) => {
-                if (confirm("Are you Sure to Delete ?")) {
-                    const index = e.target.dataset.index
-                    const storedData = JSON.parse(localStorage.getItem('myData') || [])
-                    storedData.splice(index, 1);
-                    localStorage.setItem('myData', JSON.stringify(storedData));
-                    loadStoredData();
-                }
-            })
-        });
-    };
+// console.log(welcome());
 
-});
+// welcome().then( (txt)=>{
+//     console.log(txt)
+// }).catch( ()=>{
+//     console.error("i got a error")
+// });
 
-//Learn from the Project
-//isNaN() meathod
-//formEl.reset();
+//-------------------------
+//when then catch meathod use multiple meathod
+
+//block post
+//block commnet
+
+// function getData(){
+  
+// }

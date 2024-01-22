@@ -206,7 +206,172 @@ Promise.all([getpost(), getCommit()])
 
 //block post
 //block commnet
+/*
+async function getData() {
+    let blogPost = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Blog Post");
+        }, 2000);
+    });
 
-// function getData(){
-  
+    let blogComment = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("comment For Blog");
+        }, 5000);
+    });
+
+    console.log("Fetching Post ....");
+    let post = await blogPost;
+    console.log("post :", post);
+    console.log("Fetching Commnet...");
+    let comment = await blogComment;
+    console.log("commnet :", comment)
+
+    return [post, comment];
+};
+
+console.log("Welcome to Blog post")
+let data = getData();;
+
+data.then((val) => {
+    console.log(val);
+}).catch((err) => {
+    console.log(err);
+});
+*/
+
+//-----------------------------------------------------------
+//promise then catch ,async functions
+const result = function (marks) {
+    return new Promise((resolve, reject) => {
+        console.log("Calculation Result...");
+        setTimeout(() => {
+            let total = 0;
+            let result = "Pass";
+            marks.forEach((mark) => {
+                total += mark;
+                if (mark < 35) {
+                    result = "Fail";
+                }
+            });
+            resolve({ total: total, result: result });
+        }, 2000)
+    })
+}
+// /**
+//  * 90 -100 A
+//  * 80-89 B
+//  * 70-79 C
+//  * <70 D
+//  */
+
+let grade = function (response) {
+    return new Promise((resolve, reject) => {
+        if (response.result == "Pass") {
+            let avg = response.total / 3;
+            let gradeText = "Grade D";
+            if (avg > 90 && avg < 100) {
+                gradeText = "Grade A"
+            }
+            else if (avg > 80 && avg < 89) {
+                gradeText = "Grade B"
+            }
+            else if (avg > 70 && avg < 79) {
+                gradeText = "Grade C"
+            }
+            resolve(gradeText)
+        } else {
+            reject("No Grade")
+        }
+    });
+};
+
+
+// result([198, 32, 89]).then(value => {
+//     console.log("total", value.total);
+//     console.log("result", value.result);
+//     return grade(value);
+// }).then(value => {
+//     console.log(value);
+// }).catch(err => {
+//     console.error(err);
+// });
+
+
+
+// async function getResult(){
+//     try{
+//       const value= await result([56,78,98]);
+//       console.log("total :"+value.total);
+//       console.log("result :"+value.result);
+//       const gradeText=await grade(value);
+//       console.log(gradeText);
+//     }catch(err){
+//       console.log(err);
+//     } 
+//  }
+
+// getResult();
+
+
+
+//litle bit pratice jus tmodeify
+
+// async function result(marks) {
+//     let totalResult = new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             let total = 0;
+//             let result = "Pass";
+//             marks.forEach((mark) => {
+//                 total += mark;
+//                 if (mark < 35) {
+//                     result = "Fail";
+//                 }
+//             });
+//             resolve({ total: total, result: result });
+//         }, 2000)
+//     })
+
+//     const result1 = await totalResult;
+//     console.log("total :",result1.total);
+//     console.log("reuslt :",result1.result);
+
+//         let averageGrade = new Promise((resolve, reject) => {
+//             if (result1.result == "Pass") {
+//                 let avg = result1.total / 3;
+//                 let gradeText = "Grade D";
+//                 if (avg > 90 && avg < 100) {
+//                     gradeText = "Grade A"
+//                 }
+//                 else if (avg > 80 && avg < 89) {
+//                     gradeText = "Grade B"
+//                 }
+//                 else if (avg > 70 && avg < 79) {
+//                     gradeText = "Grade C"
+//                 }
+//                 resolve(gradeText)
+//             } else {
+//                 reject("No Grade")
+//             }
+//         });
+
+
+
+//     const result2 = await averageGrade;
+//     console.log("Grade :",result2);
 // }
+
+// result([45,67,78]);
+
+
+
+
+//---------------------------
+
+/**
+ * promise 
+ *  then try catch
+ * async and await
+ *   this is also promise meathod
+ *   try catch meathod use advantage
+ */

@@ -1,194 +1,160 @@
+//Map Object in javscript
+
+const userMap = new Map();
+
+//Add elements to the Map
+userMap.set('name', "Praveen");
+userMap.set('age', "30");
+userMap.set('city', "Salem");
+userMap.set('contact', "9043017689");
+userMap.set('name', "dhinesh");
+
+console.log(userMap);
+console.log(userMap.size);
 /*
-//Fetch Api in javascript
-
-const btnText = document.getElementById('btnText');
-const txtOutput = document.getElementById('txtOutput');
-
-
-btnText.addEventListener("click", getTextFile);
-
-function getTextFile() {
-    fetch("fetch/data.txt")
-        .then((r) => r.text())
-        .then(data => {
-            txtOutput.textContent = data
-        });
-};
-
-//-------------------------------------------------------------------------
-//get data json file
-const btnJson = document.getElementById('btnJson');
-const jsonOutput = document.getElementById('jsonOutput');
-
-const handleGetJson = () => {
-    fetch("fetch/user.json")
-        .then(value => value.json())
-        .then(txt => {
-            const ul = document.createElement('ul');
-            txt.forEach((value) => {
-                const li = document.createElement('li');
-                li.textContent = value.name
-                ul.append(li);
-            });
-            jsonOutput.append(ul);
-        });
-}
-btnJson.addEventListener('click', handleGetJson);
-//---------------------------------------------------------------------------
-const btnApi = document.getElementById('btnApi');
-const apiOutput = document.getElementById('apiOutput');
-
-async function getApi() {
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-    const jsonData = await response.json();
-    jsonData.forEach((val, index) => {
-        const div = document.createElement('div');
-        const h1 = document.createElement('h1');
-        const p = document.createElement('p');
-        h1.innerHTML = `<span style="color:pink">${index}</span>  ${val.title}`
-        p.textContent = val.body
-        div.append(h1, p);
-        apiOutput.append(div);
-    })
-}
-btnApi.addEventListener('click', getApi);
-----------------------------------------------------------------------
-*/
-//Set class
-
-const users = ["ram", "sam", "ram", "rajesh"];
-console.log(users);
-
-const setOb = new Set(users);
-setOb.add(10).add(80);
-setOb.delete(10)
-setOb.delete(80)
-
+//get
+  console.log(userMap.get('city'));
+//has
+  console.log(userMap.has('city'));
+//clear
+    //   userMap.clear();
+    //   console.log(userMap);
+//delete
+    // userMap.delete('age');
+    // console.log(userMap);
 //entries
-console.log(setOb);
-console.log(setOb.has('rajesh'));
-entries = setOb.entries(values => {
-    console.log(values);
-});
-console.log(entries.next().value);
-console.log(entries.next().value);
-console.log(entries.next().value);
+   const entries =userMap.entries()
+   console.log(entries);
+
+   for(let  [key,value]  of userMap.entries()){
+       console.log(`${key}  = ${value}`); 
+   }
+//forEach
+    userMap.forEach(value =>{
+        console.log(value);
+    })
+
+//values
+for(let  entries1  of userMap.values())
+   console.log(entries1);
 
 //keys
-const val = setOb.values();
-console.log(val.next().value);
-console.log(val.next().value);
-console.log(val.next().value);
+for(let  entries1  of userMap.keys())
+console.log(entries1);
 
-/**
+//Array.map7u7iiiiiiiiiiiiiiiiiii
+console.log(Array.from(userMap));
+//Spread
+console.log([...userMap]);
 
-    ƒ add()
-    ƒ clear()
-    ƒ Set()
-    ƒ delete()
-    ƒ entries()
-    ƒ forEach()
-    ƒ has()
-    f keys()
-    ƒ values()
-
+console.log(Array.from(userMap.keys()))
+console.log(Array.from(userMap.values ()));
 */
 
-//Spread
-//  const setArray  =[...setOb]
-//  console.log(setArray);
+//Dont do this meathod
+// const wrongMap = new Map();
+// wrongMap["key1"] = "Data1";
+// wrongMap["key2"] = "Data2";
 
+// console.log(wrongMap);
 
+//NaN give a value in map object
 
-//User define functions
-/**
- * Subset
- *  A = 1 ,2 , 3
- *  B = 5 ,6 , 1, 2, 3
- *  c = 1 ,3 , 4, 5
- * union
- * Intersection
- * difference
- */
+// console.log(Number("ram"));
 
+// const user = new Map();
+// user.set(NaN,'value2');
+// console.log(user.get(NaN));
+// console.log(user);
 
-Set.prototype.subset = function (otherset) {
-    if (this.size > otherset.size) {
-        return false
+//--------------------------------------------------------------
+/*
+const first = new Map([
+    [1, "one"],
+    [2, "two"],
+    [3, "three"],
+  ]);
+  const second = new Map([
+    [1, "first"],
+    [2, "second"],
+  ]);
+
+const merged  = new Map([...first,...second]);
+console.log(merged);
+*/
+//------------------------------------------------------------------
+const sentence = "Fear leads to anger anger leads to hatred hatred leads to conflict";
+const splited = sentence.split(' ');
+console.log(splited);
+
+const coutedwords = new Map();
+
+function count() {
+    for (let word of splited) {
+        if (coutedwords.has(word)) {
+            coutedwords.set(word, coutedwords.get(word) + 1)
+        }
+        else {
+            coutedwords.set(word, 1)
+        }
+    }
+    return coutedwords;
+}
+
+console.log(count());
+
+//----------------------------------------------------------------
+const people = [
+    { name: "Raja", age: 30 },
+    { name: "Sara", age: 25 },
+    { name: "Suresh", age: 30 },
+    { name: "Sundar", age: 25 },
+];
+
+const groupedbyage = new Map();
+
+function groupbyage() {
+    for (let person of people) {
+        if (groupedbyage.has(person.age)) {
+            groupedbyage.get(person.age).push(person)
+        }
+        else {
+            groupedbyage.set(person.age, [person])
+        }
+    }
+    return groupedbyage;
+}
+
+console.log(groupbyage());
+//----------------------------------------------------------------
+
+function frequencyCounter(arr) {
+    let numberCounted = new Map();
+
+    for (let num of array) {
+        numberCounted.set(num, ((numberCounted.get(num) || 0) + 1))
+    }
+    return numberCounted
+}
+
+const array = [1, 2, 3, 1, 2, 2, 4];
+console.log(frequencyCounter(array));
+//-----------------------------------------------------------------------
+//[1:2 ,2:3 ,3:1 ,4:1]
+let obj = {}
+for (let arr of array) {
+    if (obj[arr]) {
+        obj[arr] = obj[arr] + 1
     } else {
-        for (var element of this) {
-            if (!otherset.has(element)) return false;
-        }
-        return true
+        obj[arr] = 1
     }
+}
+console.log(obj);
+//-----------------------------------------------------------
+let ob1 = {};
+for (let arr of array) {
+    ob1[arr] = (ob1[arr] || 0) + 1;
 };
+console.log(ob1)
+//----------------------------------------------------------------------------
 
-const setA = new Set([1, 2, 3]);
-const setB = new Set([5, 6, 1, 2, 3, 4]);
-const setC = new Set([1, 3, 4, 5]);
-
-
-console.log(setB.subset(setA));
-console.log(setA.subset(setC));
-console.log(setC.subset(setB));
-
-
-Set.prototype.union = function (otherset) {
-    const unionset = new Set();
-    for (let element of this) {
-        unionset.add(element);
-    }
-    for (let element of otherset) {
-        unionset.add(element);
-    }
-    return unionset
-}
-
-console.log(setA.union(setB));
-console.log(setA.union(setB));
-console.log(setB.union(setC));
-
-
-Set.prototype.intersetion = function (otherset) {
-    const unionset = new Set();
-    for (let element of otherset) {
-        if (this.has(element)) {
-            unionset.add(element);
-        }
-    }
-    return unionset
-}
-console.log(setA.intersetion(setC));
-
-Set.prototype.difference = function (otherset) {
-    const unionset = new Set();
-    for (let element of otherset) {
-        if (!this.has(element)) {
-            unionset.add(element);
-        }
-    }
-    return unionset
-}
-
-console.log(setA.difference(setB));
-
-//blog seo keyword vigit
-class TagInput{
-    constructor(){
-        this.name="praveen" 
-        this.tag = new Set();
-    }
-    addInput(value){
-      this.tag.add(value)
-    }
-}
- 
-const input =new TagInput();
-input.addInput(10)
-input.addInput(10)
-input.addInput(10)
-input.addInput(10)
-
-console.log(input);
-
-//--------------------------------------------------------------------------------------------------------------------------

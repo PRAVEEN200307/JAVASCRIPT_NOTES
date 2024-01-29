@@ -19,7 +19,7 @@ console.log(product);
 */
 //-----------------------------------------------------
 //javascript hoisting
-//In javascript ,Hoisting is the default behavior 
+//In javascript ,Hoisting is the default behavior
 //of moving all the declarations at the top of the scope before code execution
 /*
  window.networkig();
@@ -97,7 +97,7 @@ console.log(movieCollections);
 /*
   let student ={
     firstName :"Anbu ",
-    lastName :"Selvan", 
+    lastName :"Selvan",
     get fullName(){
       return `${this.firstName} ${this.lastName}`;
     },
@@ -141,7 +141,9 @@ function log(message){
 //-----------------------------------------------------------------
 //80.let const
 
-//let--funtion scoper
+//var--funtion scope
+  //it work function and if ,for , it variable work out of the scope
+  // var is  a merging  window object merge
 //let --local scope
 //-----------------------------------------------------------
 //48.javascript Date Object

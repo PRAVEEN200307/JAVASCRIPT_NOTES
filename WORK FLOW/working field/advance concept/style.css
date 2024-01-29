@@ -1,93 +1,57 @@
-/* style in css  */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(232, 236, 245);
+  font-family: 'Lora', serif;
+  background-color: rgb(217, 237, 238);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.container {
-    max-width: 600px;
-    background-color: #fff;
-    margin: 13px auto;
-    padding: 15px;
-    border-radius: 2px;
-    border: 1px solid #a6a0a0;
+form{
+   background-color: #fff;
+   padding: 10px 30px;
+   width: 400px;
+   box-shadow: 3px 5px 20px 6px #d5d2d2;
 }
-
-h1 {
-    color: #ff0000;
+form label{
+   font-size: 18px;
+   font-weight: bold;
+   color: rgb(105, 101, 101);
+}
+.form-group{
+   margin: 10px 0px;
+}
+.form-group input{
+    padding:6px 17px;
+    border-radius: 4px;
+    border: 1px solid rgb(193, 187, 187);
+    outline: none;
+    width: 100%;
+    margin-top: 5px;
+    color: gray;
     font-size: 18px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 100;
 }
-
-h2 {
-    color: orange;
-    font-size: 16px;
-    font-weight: 500;
-    margin: 12px 0;
+button{
+   background-color: lightseagreen;
+   padding: 10px 30px;
+   border: none;
+   color: #fff;
+   border-radius: 4px;
+   width: 100%;
+   cursor: pointer;
+   margin-top: 4px;
 }
-
-form div label {
-    padding-left: inherit;
-}
-
-form div * {
-    display: block;
-    height: 23px;
-    padding-left: 13px;
-    margin-bottom: 4px;
-    width: 250px;
-}
-
-button {
-    padding: 5px 15px;
-    margin: 4px 0;
-}
-
-table {
-    width: 100%;
-    text-align: left;
-    border-collapse: collapse;
-    padding: 15px;
-}
-
-th,
-td {
-    padding: 6px 5px;
-    border-bottom: 1px solid #847f7f;
-
-}
-
-tbody tr:hover {
-    background-color: #dce3f3;
-}
-
-.model {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-}
-
-.model-content {
-    background-color: #fff;
-    width: 50%;
-    margin: 15% auto;
-    padding: 20px;
-}
-
-.close {
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #aaa;
-}
-
-.close:hover {
-    color: black;
+button:hover{
+  background-color: rgb(20, 130, 125);
 }
